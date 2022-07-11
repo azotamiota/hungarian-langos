@@ -26,6 +26,10 @@
 }
 
 #nav-links > li > a:hover{
+    color: green;
+    /* background-color: yellow; */
+}
+#nav-links > li > a:active {
     color: blue;
     /* background-color: yellow; */
 }

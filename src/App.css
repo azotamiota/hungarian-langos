@@ -8,7 +8,7 @@ body {
 
 /************************************************************** Navbar START*/
 #logo {
-    width: 15vw;
+    width: 40px;
     height: auto;
     border-radius: 50%;
 }
@@ -17,7 +17,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 4vw;
+    padding: 5px 0 0 25px;
     background-color: #faf3c8;
 }
 

@@ -6,7 +6,7 @@ export default function Hero() {
     <div id="hero">
       <img id='hero-image'src={cloudImage} alt=""/>
       <header><span className='red-letters'>Hun</span><span className='white-letters'>gar</span><span className='green-letters'>ian</span> Langos</header>
-      <p id="introduction">Ide johet valami bevezeto szoveg, valami frappans leiras a helyrol, mirol hires, mi a legfinomabb...stb.</p>
+      <div id="introduction">Ide johet valami bevezeto szoveg, valami frappans leiras a helyrol, mirol hires, mi a legfinomabb...stb.</div>
     </div>
   </>;
 }

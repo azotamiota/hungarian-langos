@@ -27,6 +27,7 @@ body {
 
 #nav-links {
     position: absolute;
+    width: 65vw;
     flex-direction: column;
     right: 0%;
     top: 37px;
@@ -118,7 +119,7 @@ body {
 }
 
 header {
-    margin-top: 170px;
+    margin-top: 30vw;
     font-size: 25px;
     letter-spacing: 2px;
 }
@@ -138,6 +139,7 @@ header {
 #introduction {
     padding: 7vw;
     color: azure;
+    text-align: justify;
 }
 
 /************************************************************** Hero END*/

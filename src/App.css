@@ -1,8 +1,16 @@
-/* * {
+* {
     border: 1px solid red;
-} */
+}
+body {
+     font-family: 'Nunito', sans-serif;
+}
 
 /************************************************************** Navbar START*/
+#logo {
+    width: 15vw;
+    height: auto;
+    border-radius: 50%;
+}
 
 #navbar {
     display: flex;
@@ -19,7 +27,7 @@
 #nav-links {
     position: absolute;
     flex-direction: column;
-    left: -200%;
+    right: 0%;
     top: 37px;
     padding: 1em;
     background-color: #695847;;
@@ -83,11 +91,6 @@
   transform: rotate(45deg) translate(-8px, -8px);
 }
 
-#logo {
-    width: 20vw;
-    height: auto;
-    border-radius: 50%;
-}
 /************************************************************** Navbar END*/
 
 /************************************************************** Hero START*/
@@ -103,7 +106,6 @@
     width: auto;
     color: #ffdead;
     text-align: center;
-    font-family: 'Nunito', sans-serif;
 }
 
 #hero-image {
@@ -120,19 +122,41 @@ header {
     letter-spacing: 2px;
 }
 
-#red-letters {
+.red-letters {
     color: red;
 }
 
-#white-letters {
+.white-letters {
     color: white;
 }
 
-#green-letters {
+.green-letters {
     color: green;   
 }
 
 #introduction {
-    padding: 10vw;
+    padding: 7vw;
     color: azure;
+}
+
+/************************************************************** Hero END*/
+
+/************************************************************** Services START*/
+
+#services {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    /* background-image:  linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('./images/owner-with-langos.jpg'); */
+    /* background-size: 100vw auto; */
+    /* background-repeat: no-repeat; */
+    /* height: vh;
+    width: auto; */
+    color: #ffdead;
+    text-align: center;
+}
+
+#services-header {
+    margin-top: 0px
 }

@@ -37,7 +37,7 @@ export default function Navbar() {
         </div>
         <ul id="nav-links" className={state.navbarVisibility}>
             <li><a href="#home" className="active">Home</a></li>
-            <li><a href="#services">Our Services</a></li>
+            <li><a href="#services">Mi kaphato</a></li>
             <li><a href="#portfolio">Portfolio</a></li>
             <li><a href="#testimonials">Testimonials</a></li>
             <li><a href="#products">Products</a></li>

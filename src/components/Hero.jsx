@@ -5,8 +5,8 @@ export default function Hero() {
   return <>
     <div id="hero">
       <img id='hero-image'src={cloudImage} alt=""/>
-      <header><span id='red-letters'>Hun</span><span id='white-letters'>gar</span><span id='green-letters'>ian</span> Langos</header>
-      <p id="introduction">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorum sunt ducimus minus consequuntur quis facere esse dignissimos.</p>
+      <header><span className='red-letters'>Hun</span><span className='white-letters'>gar</span><span className='green-letters'>ian</span> Langos</header>
+      <p id="introduction">Ide johet valami bevezeto szoveg, valami frappans leiras a helyrol, mirol hires, mi a legfinomabb...stb.</p>
     </div>
   </>;
 }

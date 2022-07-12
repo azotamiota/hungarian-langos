@@ -1,6 +1,7 @@
-* {
+/* * {
     border: 1px solid red;
-}
+} */
+
 body {
      font-family: 'Nunito', sans-serif;
 }
@@ -148,15 +149,22 @@ header {
     flex-direction: column;
     justify-content: center;
     position: relative;
+    text-align:center;
+    /* background-color: #faf3c8; */
     /* background-image:  linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('./images/owner-with-langos.jpg'); */
     /* background-size: 100vw auto; */
     /* background-repeat: no-repeat; */
     /* height: vh;
     width: auto; */
-    color: #ffdead;
-    text-align: center;
 }
 
 #services-header {
-    margin-top: 0px
+    margin-top: 20px;
+}
+
+#services-description {
+    text-align: justify;
+    padding: 1em;
+    letter-spacing: 1px;
+    margin: 0;
 }

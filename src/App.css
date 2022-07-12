@@ -176,10 +176,32 @@ header {
 }
 
 .card {
-    margin: 5vw;
-    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 4vw;
+    width: 75%;
+    border: 3px solid #deb06c;
+    padding: 6vw;
+    border-radius: 25px;
 }
 
 .services-logo {
     color:red;
+}
+
+.card-description {
+    margin: 10px 0;
+    text-align: justify;
+    letter-spacing: 1px;
+}
+
+.button {
+    padding: 5px 10vw;
+    border-radius: 10px;
+    background-color: #ffdead;
+    font-family: inherit;
+    font-size: 15px;
+    letter-spacing: 1px;
+    font-weight: bold;
 }

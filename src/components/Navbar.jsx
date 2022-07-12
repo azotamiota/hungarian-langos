@@ -1,4 +1,5 @@
 import React, { useReducer } from "react";
+import logo from '../images/logo_Cropped.png'
 
 const initialState = {
   navbarVisibility: 'hide-section',
@@ -23,7 +24,7 @@ export default function Navbar() {
                 
   return <div id="navbar">
     <div className="brand">
-        <img src="#" alt="Navbar image" />
+        <img src={logo} alt=""/>
         <div className="toogle">
 
         </div>

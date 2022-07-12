@@ -23,7 +23,8 @@
 
 #nav-links > li {
     text-align: end;
-    margin-top: 1em;    
+    margin-top: 1em;
+    list-style-type:none;
 }
 
 #nav-links > li > a{
@@ -75,4 +76,10 @@
 .cross .bar3 {
   -webkit-transform: rotate(45deg) translate(-8px, -8px);
   transform: rotate(45deg) translate(-8px, -8px);
+}
+
+img {
+    width: 30vw;
+    height: auto;
+    border-radius: 50%;
 }

@@ -2,6 +2,8 @@
     border: 1px solid red;
 } */
 
+/************************************************************** Navbar START*/
+
 #navbar {
     display: flex;
     justify-content: space-between;
@@ -34,20 +36,20 @@
     letter-spacing: 2px;
     color: red;
     transition: 0.3s ease-in-out;
-    /* background-color: yellow; */
 }
 
 #nav-links > li > a:hover{
     color: green;
-    /* background-color: yellow; */
 }
+
 #nav-links > li > a:active {
     color: blue;
-    /* background-color: yellow; */
 }
+
 .hide-section {
     display: none;
 }
+
 .show-section {
     display:flex;
 }
@@ -78,8 +80,11 @@
   transform: rotate(45deg) translate(-8px, -8px);
 }
 
-img {
-    width: 30vw;
+#logo {
+    width: 20vw;
     height: auto;
     border-radius: 50%;
 }
+/************************************************************** Navbar END*/
+
+/************************************************************** Hero START*/

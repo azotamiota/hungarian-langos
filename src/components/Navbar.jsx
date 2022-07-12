@@ -24,7 +24,7 @@ export default function Navbar() {
                 
   return <div id="navbar">
     <div className="brand">
-        <img src={logo} alt=""/>
+        <img id="logo" src={logo} alt=""/>
         <div className="toogle">
 
         </div>
@@ -42,12 +42,6 @@ export default function Navbar() {
             <li><a href="#testimonials">Testimonials</a></li>
             <li><a href="#products">Products</a></li>
         </ul>
-        {/* <div className='hide-section'>
-            <a class="nav-items" onclick="showWelcome()">Home</a>
-            <a class="nav-items" onclick="showAbout()">About</a>
-            <a class="nav-items" onclick="showProjectsArticle()">Projects</a>
-            <a class="nav-items" onclick="showContact()">Contact</a>
-        </div> */}
     </div>
   </div>;
 }

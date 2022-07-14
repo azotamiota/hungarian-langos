@@ -22,6 +22,6 @@ export default function FoodGroups() {
           <div className="button">Mutasd</div>
         </div>
       </div>
-  </div>;
+  </div>
   </>
 }

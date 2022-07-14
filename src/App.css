@@ -32,7 +32,7 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 5px 0 0 25px;
-    background-color: #faf3c8;
+    /* background-color: #faf3c8; */
 }
 
 #hamburger-menu {
@@ -46,7 +46,7 @@ body {
     right: 0%;
     top: 37px;
     padding: 1em;
-    background-color: #695847;;
+    background-color: black;
     z-index: 1;
 }
 
@@ -61,7 +61,7 @@ body {
     text-decoration: none;
     text-transform: uppercase;
     letter-spacing: 2px;
-    color: #ffbd59;
+    color: white;
     transition: 0.3s ease-in-out;
 }
 
@@ -89,15 +89,15 @@ body {
 
 .bar1, .bar2, .bar3 {
   width: 35px;
-  height: 5px;
-  background-color: #5d3624;
+  height: 3px;
+  background-color: #36251d;
   margin: 6px 0;
   transition: 0.4s;
 }
 
 .cross .bar1 {
-  -webkit-transform: rotate(-45deg) translate(-9px, 6px);
-  transform: rotate(-45deg) translate(-9px, 6px);
+  -webkit-transform: rotate(-45deg) translate(-6px, 4px);
+  transform: rotate(-45deg) translate(-6px, 4px);
 }
 
 .cross .bar2 {opacity: 0;}
@@ -316,15 +316,16 @@ header {
     flex-direction: column;
     align-items: center;
     padding: 1em;
-    background-image:  linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4)), url('./images/street-view.jpg');
+    color: white;
+    background-image:  linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.4)), url('./images/street-view.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     border-radius: 25px;
+    box-shadow: 0px 0px 5px black;
 }
 
 #location-text {
     width: 60vw;
-    color: white
 }
 
 #location-header {
@@ -335,4 +336,43 @@ header {
 iframe {
     width: 90%;
     margin-top: 15px;
+}
+
+/************************************************************** Location END*/
+
+/************************************************************** Footer START*/
+
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 15px auto 0 auto;
+    padding: 0.7em 0;
+}
+
+#footer-icons {
+    width: 100vw;
+}
+
+.c-icon {
+    margin-right: 3vw;
+    padding: 0.7em;
+}
+
+#brand-logos {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    margin-top: 15px;
+    justify-content: space-around;
+    padding: 1em 0;
+    border-top: 1px solid black;
+    width: 100%;
+    border-bottom: 1px solid black;
+}
+
+.brand-logo {
+  padding: 0 11vw;
+  font-size: 30px;
+  text-align: center;
 }

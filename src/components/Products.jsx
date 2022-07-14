@@ -10,17 +10,17 @@ export default function Products() {
         <div className="food-card first-group-card">
           <div className="food-photo"></div>
           <div className="food-card-description">Sajtos-tejfolos-zoldseges langos</div>
-          <div className="price">£3.45</div>
+          <div className="price">£6.45</div>
         </div>
         <div className="food-card">
           <div className="food-photo"></div>
           <div className="food-card-description">Sajtos-tejfolos-zoldseges langos</div>
-          <div className="price">£3.45</div>
+          <div className="price">£6.45</div>
         </div>
         <div className="food-card last-group-card">
           <div className="food-photo"></div>
           <div className="food-card-description">Sajtos-tejfolos-zoldseges langos</div>
-          <div className="price">£3.45</div>
+          <div className="price">£6.45</div>
         </div>
     </div>
   </div>
@@ -31,17 +31,17 @@ export default function Products() {
         <div className="food-card first-group-card">
           <div className="food-photo2"></div>
           <div className="food-card-description">Hagyomanyos magyar gulyas</div>
-          <div className="price">£4.15</div>
+          <div className="price">£7.15</div>
         </div>
         <div className="food-card">
           <div className="food-photo2"></div>
           <div className="food-card-description">Hagyomanyos magyar gulyas</div>
-          <div className="price">£4.15</div>
+          <div className="price">£7.15</div>
         </div>
         <div className="food-card last-group-card">
           <div className="food-photo2"></div>
           <div className="food-card-description">Hagyomanyos magyar gulyas</div>
-          <div className="price">£4.15</div>
+          <div className="price">£7.15</div>
         </div>
     </div>
   </div>

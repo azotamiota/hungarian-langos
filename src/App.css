@@ -6,6 +6,20 @@ body {
      font-family: 'Nunito', sans-serif;
 }
 
+#to-top {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: 2%;
+    right: 3%;
+    width: 10vw;
+    height: 10vw;
+    border-radius: 50%;
+    background-color: #ffdead;
+    z-index: 2;
+}
+
 /************************************************************** Navbar START*/
 #logo {
     width: 40px;

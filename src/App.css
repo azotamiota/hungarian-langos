@@ -146,21 +146,15 @@ header {
 
 /************************************************************** Services START*/
 
-#services {
+.products {
     display: flex;
     flex-direction: column;
     justify-content: center;
     position: relative;
     text-align:center;
-    /* background-color: #faf3c8; */
-    /* background-image:  linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('./images/owner-with-langos.jpg'); */
-    /* background-size: 100vw auto; */
-    /* background-repeat: no-repeat; */
-    /* height: vh;
-    width: auto; */
 }
 
-#services-header {
+.services-header {
     margin-top: 20px;
 }
 
@@ -171,7 +165,7 @@ header {
     margin: 0;
 }
 
-#services-cards {
+.cards-class {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -183,6 +177,7 @@ header {
     align-items: center;
     margin: 4vw;
     width: 75%;
+    border: 3px solid #deb06c;
     border: 3px solid #deb06c;
     padding: 6vw;
     border-radius: 25px;
@@ -206,4 +201,54 @@ header {
     font-size: 15px;
     letter-spacing: 1px;
     font-weight: bold;
+}
+
+/************************************************************** Services END*/
+
+/************************************************************** Products START*/
+.food-photo {
+    background-image: url('./images/langos1.jpg');
+    height: 70vw;
+    width: 70vw;
+    background-size: cover;
+    background-position: center;
+    border-radius: 25px;
+}
+
+.food-photo2 {
+    background-image: url('./images/gulyas.jpg');
+    height: 70vw;
+    width: 70vw;
+    background-size: cover;
+    background-position: center;
+    border-radius: 25px;
+}
+
+.food-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 4vw;
+    width: 75%;
+    border-top: 2px solid #deb06c;
+    border-bottom: 2px solid #deb06c;
+    padding: 6vw;
+}
+
+.food-card-description {
+    margin: 10px 0;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+.price {
+    color:white;
+    padding: 5px 10vw;
+    border-radius: 10px;
+    background-color: #b46f06;
+    font-family: inherit;
+    font-size: 15px;
+    letter-spacing: 1px;
+    font-weight: bold;
+    letter-spacing: 3px;
 }

@@ -143,7 +143,7 @@ header {
 }
 
 .separator {
-    margin: 3em auto;
+    margin: 3em auto 2em auto;
     display: flex;
     justify-content: center;
     position: relative;
@@ -244,7 +244,7 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 4vw;
+    margin: 2px;
     width: 75%;
     border-top: 2px solid green;
     border-bottom: 2px solid red;

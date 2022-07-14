@@ -40,6 +40,7 @@ export default function Navbar() {
             <li><a href="#food-groups">Finomsagaink</a></li>
             <li><a href="#street-food">Street Food</a></li>
             <li><a href="#bowls">Egytal etelek</a></li>
+            <li><a href="#drinks">Italok</a></li>
             {/* <li><a href="#products">Products</a></li> */}
         </ul>
     </div>

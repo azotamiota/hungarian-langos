@@ -9,17 +9,17 @@ export default function FoodGroups() {
         <div className="card">
           <div className="services-logo"><i className="fa-lg fa-solid fa-utensils"></i></div>
           <div className="card-description">Ide johet a szoveg az elerheto gyorsetelerol, pl a langosrol nehany mondatban</div>
-          <div className="button">Mutasd</div>
+          <div className="button"><a href='#street-food'>Mutasd</a></div>
         </div>
         <div className="card">
           <div className="services-logo" style={{color: 'green'}}><i className="fa-lg fa-solid fa-bowl-food"></i></div>
           <div className="card-description">Ide mondjuk johet a szoveg az egytaletelekrol, pl szekely kaposzta es tarsai</div>
-          <div className="button">Mutasd</div>
+          <div className="button"><a href='#bowls'>Mutasd</a></div>
         </div>
         <div className="card">
           <div className="services-logo"><i className="fa-lg fa-solid fa-champagne-glasses"></i></div>
           <div className="card-description">Ide pedig az elerheto hideg es forro italokrol johet a szoveg</div>
-          <div className="button">Mutasd</div>
+          <div className="button"><a href='#drinks'>Mutasd</a></div>
         </div>
       </div>
   </div>

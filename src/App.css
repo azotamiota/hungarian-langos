@@ -186,17 +186,10 @@ header {
 
 /************************************************************** FoodGroups START*/
 
-a {
-    text-decoration: none;
-}
-
-a:visited {
-    text-decoration: none;
-}
-
-a:active {
-    text-decoration: none;
-}
+a, a:hover, a:focus, a:active, a:visited {
+      text-decoration: none;
+      color: inherit;
+ }
 
 .products {
     display: flex;

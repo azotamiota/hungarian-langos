@@ -5,7 +5,7 @@ import Hero from "./components/Hero";
 // import Portfolio from "./components/Portfolio";
 import Navbar from "./components/Navbar";
 import Products from "./components/Products";
-import ScrollToTop from "./components/ScrollToTop";
+// import ScrollToTop from "./components/ScrollToTop";
 // import Testimonials from "./components/Testimonials";
 import FoodGroups from './components/FoodGroups';
 import Separator from './components/Separator';

@@ -40,10 +40,6 @@ body {
     z-index: 99;
 }
 
-#hamburger-menu {
-    /* position: relative; */
-}
-
 #nav-links {
     position: fixed;
     width: 100vw;
@@ -52,6 +48,7 @@ body {
     background-color: black;
     z-index: 99;
     padding-inline-start: 0;
+    padding-block: 0.7em;
 }
 
 #nav-links > li {
@@ -74,7 +71,7 @@ body {
 }
 
 #nav-links > li > a:active {
-    color: blue;
+    color: red;
 }
 
 .hide-section {

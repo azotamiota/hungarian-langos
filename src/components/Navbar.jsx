@@ -41,13 +41,13 @@ export default function Navbar() {
         </div>
   </div>
   <ul id="nav-links" className={state.navbarVisibility}>
-            <li><a href='#hero' className="active">Home</a></li>
-            <li><a href="#food-groups">Finomsagaink</a></li>
-            <li><a href="#street-food">Street Food</a></li>
-            <li><a href="#bowls">Egytal etelek</a></li>
-            <li><a href="#drinks">Italok</a></li>
-            <li><a href="#location">Location</a></li>
-            <li><a href="#footer-icons">Contact</a></li>
+            <li><a onClick={() => dispatch({type: "SET_MULTIPLE"})} href='#hero' className="active">Home</a></li>
+            <li><a onClick={() => dispatch({type: "SET_MULTIPLE"})} href="#food-groups">Finomsagaink</a></li>
+            <li><a onClick={() => dispatch({type: "SET_MULTIPLE"})} href="#street-food">Street Food</a></li>
+            <li><a onClick={() => dispatch({type: "SET_MULTIPLE"})} href="#bowls">Egytal etelek</a></li>
+            <li><a onClick={() => dispatch({type: "SET_MULTIPLE"})} href="#drinks">Italok</a></li>
+            <li><a onClick={() => dispatch({type: "SET_MULTIPLE"})} href="#location">Location</a></li>
+            <li><a onClick={() => dispatch({type: "SET_MULTIPLE"})} href="#footer-icons">Contact</a></li>
   </ul>
   </>
 }

@@ -9,7 +9,7 @@ export default function Footer() {
             <div className="contact-logo"><i className="c-icon fa-lg fa-solid fa-envelope"></i>valami@valami.com</div>
             <div id="brand-logos">
               <div className="brand-logo">
-                <i className="fa-lg fa-brands fa-facebook"></i>
+                <a href='https://www.facebook.com/paradeburger' target='blank'><i className="fa-lg fa-brands fa-facebook"></i></a>
               </div>
               <div className="brand-logo">
                 <i className="fa-lg fa-brands fa-instagram"></i>
@@ -19,6 +19,7 @@ export default function Footer() {
               </div>
             </div>
         </div>
+        <div id="copyright">Copyright &copy; <a href="https://azotamiota.github.io"><u>azotamiota</u></a> 2022</div>
     </footer>
   </>
 }

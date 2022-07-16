@@ -3,7 +3,7 @@
 } */
 
 body {
-     font-family: 'Nunito', sans-serif;
+     font-family: 'Arvo', serif;
 }
 
 #to-top {
@@ -21,10 +21,17 @@ body {
 }
 
 /************************************************************** Navbar START*/
-#logo {
-    width: 40px;
-    height: auto;
-    border-radius: 50%;
+
+header {
+    /* margin-top: 30vw; */
+    font-size: 22px;
+    letter-spacing: 2px;
+    padding: 0.3em;
+}
+
+.brand-header {
+    font-family: 'Lobster', cursive;
+    padding: 0.5em;
 }
 
 #navbar {
@@ -122,8 +129,21 @@ body {
     background-repeat: no-repeat;
     height: 71vh;
     width: auto;
-    color: #ffdead;
+    color: white;
     text-align: center;
+}
+
+#hero-header {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 7vw;
+}
+
+hr {
+    display: inline-block;
+    width: 7vw;
+    margin: 0;
+    border: 0;
 }
 
 #hero-image {
@@ -134,10 +154,15 @@ body {
     left: 50%;
 }
 
-header {
-    /* margin-top: 30vw; */
-    font-size: 25px;
-    letter-spacing: 2px;
+#hero-logo {
+    width: 60px;
+    margin: 0 auto;
+}
+
+.logo {
+    width: 40px;
+    height: auto;
+    border-radius: 50%;
 }
 
 .red-letters {
@@ -154,7 +179,6 @@ header {
 
 #introduction {
     padding: 7vw;
-    color: azure;
     text-align: justify;
 }
 

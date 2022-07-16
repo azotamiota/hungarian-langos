@@ -1,5 +1,5 @@
 import React, { useReducer } from "react";
-import logo from '../images/H-langos.png'
+// import logo from '../images/H-langos.png'
 
 const initialState = {
   navbarVisibility: 'hide-section',
@@ -25,18 +25,20 @@ export default function Navbar() {
   return <>
   <div id="navbar">
     <div className="brand">
-        <img id="logo" src={logo} alt=""/>
+
+      <header className='brand-header'><span className='red-letters'>Hungarian</span><span className='green-letters'> Langos</span></header>
+
+
+        {/* <img id="logo" src={logo} alt=""/>
         <div className="toogle">
 
-        </div>
+        </div> */}
     </div>
-    <div id="hamburger-menu" onClick={() => dispatch({type: "SET_MULTIPLE"})}>
-       <div id="container" className={state.hamburgerMenuState}>
+       <div id="container" className={state.hamburgerMenuState} onClick={() => dispatch({type: "SET_MULTIPLE"})}>
             <div className="bar1"></div>
             <div className="bar2"></div>
             <div className="bar3"></div>
         </div>
-    </div>
   </div>
   <ul id="nav-links" className={state.navbarVisibility}>
             <li><a href='#hero' className="active">Home</a></li>

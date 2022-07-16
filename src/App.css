@@ -178,7 +178,8 @@ hr {
 }
 
 #introduction {
-    padding: 7vw;
+    margin: 0 auto;
+    width: 75vw;
     text-align: justify;
 }
 

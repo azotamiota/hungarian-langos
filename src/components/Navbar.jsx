@@ -22,7 +22,8 @@ export default function Navbar() {
 
   const [state, dispatch] = useReducer(reducer, initialState)
                 
-  return <div id="navbar">
+  return <>
+  <div id="navbar">
     <div className="brand">
         <img id="logo" src={logo} alt=""/>
         <div className="toogle">
@@ -35,7 +36,9 @@ export default function Navbar() {
             <div className="bar2"></div>
             <div className="bar3"></div>
         </div>
-        <ul id="nav-links" className={state.navbarVisibility}>
+    </div>
+  </div>
+  <ul id="nav-links" className={state.navbarVisibility}>
             <li><a href='#hero' className="active">Home</a></li>
             <li><a href="#food-groups">Finomsagaink</a></li>
             <li><a href="#street-food">Street Food</a></li>
@@ -43,9 +46,7 @@ export default function Navbar() {
             <li><a href="#drinks">Italok</a></li>
             <li><a href="#location">Location</a></li>
             <li><a href="#footer-icons">Contact</a></li>
-            {/* <li><a href="#products">Products</a></li> */}
-        </ul>
-    </div>
-  </div>;
+  </ul>
+  </>
 }
 

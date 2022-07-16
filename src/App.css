@@ -28,26 +28,30 @@ body {
 }
 
 #navbar {
+    position: fixed;
+    top: 0;
+    height: 60px;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 5px 0 0 25px;
-    /* background-color: #faf3c8; */
+    /* padding: 5px 0 0 25px; */
+    background-color: white;
+    z-index: 99;
 }
 
 #hamburger-menu {
-    position: relative;
+    /* position: relative; */
 }
 
 #nav-links {
-    position: absolute;
-    width: 65vw;
+    position: fixed;
+    width: 100vw;
+    margin-block-start: 0;
     flex-direction: column;
-    right: 0%;
-    top: 37px;
-    padding: 1em;
     background-color: black;
-    z-index: 1;
+    z-index: 99;
+    padding-inline-start: 0;
 }
 
 #nav-links > li {
@@ -111,6 +115,7 @@ body {
 
 /************************************************************** Hero START*/
 #hero {
+    margin-top: 60px;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;

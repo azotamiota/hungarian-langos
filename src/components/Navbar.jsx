@@ -36,7 +36,7 @@ export default function Navbar() {
                 
   return <>
   <div id={(!isBiggerThanTablet && "navbar") || 'navbar-tablet' }>
-    <div className="brand">
+    <div id={isBiggerThanTablet && "brand"}>
 
       <header className='brand-header'><span className='red-letters'>Hungarian</span><span className='green-letters'> Langos</span></header>
 

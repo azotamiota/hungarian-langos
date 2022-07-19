@@ -5,7 +5,7 @@ import Separator from './Separator';
 export default function Footer() {
   return <>
     <footer>
-      <header>Opening hours</header>
+      <u><header><span className='red-letters'>Opening</span><span className='green-letters'> hours</span></header></u>
         <div id="opening-hours">
           <div>Monday</div>
           <div>Closed</div>

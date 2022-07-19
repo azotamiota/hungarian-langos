@@ -34,33 +34,28 @@ export default function Navbar() {
 
   const [state, dispatch] = useReducer(reducer, initialState)
                 
+  // <img src="../images/logo.png" alt=""/>
+
   return <>
-  <div id={(!isBiggerThanTablet && "navbar") || 'navbar-tablet' }>
-    <div id={isBiggerThanTablet && "brand"}>
-
-      <header className='brand-header'><span className='red-letters'>Hungarian</span><span className='green-letters'> Langos</span></header>
-
-
-        {/* <img id="logo" src={logo} alt=""/>
-        <div className="toogle">
-
-        </div> */}
+  <div id="navbar-container">
+    <div id={(!isBiggerThanTablet && "navbar") || 'navbar-tablet' }>
+        <header className='brand-header'><span className='red-letters'>Hungarian</span><span className='green-letters'> Langos</span></header>       
     </div>
-       {!isBiggerThanTablet && <div id="container" className={state.hamburgerMenuState} onClick={() => dispatch({type: "SET_MULTIPLE"})}>
-            <div className="bar1"></div>
-            <div className="bar2"></div>
-            <div className="bar3"></div>
-        </div>}
+    {!isBiggerThanTablet && <div id="container" className={state.hamburgerMenuState} onClick={() => dispatch({type: "SET_MULTIPLE"})}>
+              <div className="bar1"></div>
+              <div className="bar2"></div>
+              <div className="bar3"></div>
+          </div>}
+    <ul id={(!isBiggerThanTablet && "nav-links") || "nav-links-tablet"} className={!isBiggerThanTablet && state.navbarVisibility}>
+              <li><a onClick={!isBiggerThanTablet && (() => dispatch({type: "SET_MULTIPLE"}))} href='#hero'>Home</a></li>
+              <li><a onClick={!isBiggerThanTablet && (() => dispatch({type: "SET_MULTIPLE"}))} href="#food-groups">Finomsagaink</a></li>
+              <li><a onClick={!isBiggerThanTablet && (() => dispatch({type: "SET_MULTIPLE"}))} href="#street-food">Street Food</a></li>
+              <li><a onClick={!isBiggerThanTablet && (() => dispatch({type: "SET_MULTIPLE"}))} href="#bowls">Egytal etelek</a></li>
+              <li><a onClick={!isBiggerThanTablet && (() => dispatch({type: "SET_MULTIPLE"}))} href="#drinks">Italok</a></li>
+              <li><a onClick={!isBiggerThanTablet && (() => dispatch({type: "SET_MULTIPLE"}))} href="#location">Location</a></li>
+              <li><a onClick={!isBiggerThanTablet && (() => dispatch({type: "SET_MULTIPLE"}))} href="#footer-icons">Contact</a></li>
+    </ul>
   </div>
-  <ul id={(!isBiggerThanTablet && "nav-links") || "nav-links-tablet"} className={!isBiggerThanTablet && state.navbarVisibility}>
-            <li><a onClick={!isBiggerThanTablet && (() => dispatch({type: "SET_MULTIPLE"}))} href='#hero'>Home</a></li>
-            <li><a onClick={!isBiggerThanTablet && (() => dispatch({type: "SET_MULTIPLE"}))} href="#food-groups">Finomsagaink</a></li>
-            <li><a onClick={!isBiggerThanTablet && (() => dispatch({type: "SET_MULTIPLE"}))} href="#street-food">Street Food</a></li>
-            <li><a onClick={!isBiggerThanTablet && (() => dispatch({type: "SET_MULTIPLE"}))} href="#bowls">Egytal etelek</a></li>
-            <li><a onClick={!isBiggerThanTablet && (() => dispatch({type: "SET_MULTIPLE"}))} href="#drinks">Italok</a></li>
-            <li><a onClick={!isBiggerThanTablet && (() => dispatch({type: "SET_MULTIPLE"}))} href="#location">Location</a></li>
-            <li><a onClick={!isBiggerThanTablet && (() => dispatch({type: "SET_MULTIPLE"}))} href="#footer-icons">Contact</a></li>
-  </ul>
   </>
 }
 

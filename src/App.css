@@ -4,6 +4,7 @@
 
 html, body {
      font-family: 'Arvo', serif;
+     overflow-x: hidden;
 }
 
 #to-top {

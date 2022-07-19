@@ -44,6 +44,7 @@ header {
     width: 100%;
     background-color: white;
     z-index: 99;
+    box-shadow: 0 0px 10px
 }
 
 #navbar {
@@ -58,7 +59,7 @@ header {
     position: fixed;
     width: 30%;
     top: 0;
-    height: 70px;
+    height: 60px;
     align-items: center;
     background-color: white;
     z-index: 100;
@@ -82,7 +83,7 @@ header {
     top: 0;
     left: 30%;
     width: 70%;
-    height: 70px;
+    height: 60px;
     margin-block-start: 0;
     font-size: 16px;
     z-index: 100;
@@ -222,7 +223,16 @@ hr {
     text-align: justify;
     letter-spacing: -1px;
 }
- #introduction::after {
+
+#introduction-tablet {
+    letter-spacing: 1px;
+    font-size: 16px;
+    margin: 0 auto;
+    width: 75vw;
+    text-align: justify;
+}
+
+ #introduction::after, #introduction-tablet::after {
     display: block;
     width: 100%;
     height: 20vh;
@@ -285,7 +295,7 @@ a, a:hover, a:focus, a:active, a:visited {
 #services-description {
     text-align: justify;
     padding: 1em;
-    letter-spacing: 1px;
+    letter-spacing: 0px;
     margin: 0;
 }
 
@@ -293,6 +303,12 @@ a, a:hover, a:focus, a:active, a:visited {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.cards-class-tablet {
+    display: grid;
+    grid-template-columns: 32% 32% 32%;
+    justify-content: center;
 }
 
 .card {
@@ -306,6 +322,16 @@ a, a:hover, a:focus, a:active, a:visited {
     border-radius: 25px;
 }
 
+.card-tablet {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 5px;
+    border: 3px solid #deb06c;
+    padding: 15px 7px;
+    border-radius: 25px;
+}
+
 .services-logo {
     color:red;
 }
@@ -316,8 +342,14 @@ a, a:hover, a:focus, a:active, a:visited {
     letter-spacing: 1px;
 }
 
+.card-description-tablet {
+    margin: 15px 0;
+    text-align: start;
+    letter-spacing: -1px;
+}
+
 .button {
-    padding: 5px 10vw;
+    padding: 5px 20px;
     border-radius: 10px;
     background-color: #ffdead;
     font-family: inherit;

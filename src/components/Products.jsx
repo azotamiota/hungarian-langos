@@ -11,10 +11,14 @@ export default function Products() {
   
   const [position, setPosition] = useState(0)
 
+  function myFunc(e) {
+    console.log('kurva anyad')
+  }
+
   return <>
   <div id={isBiggerThanMobile && "street-food"} className='products'>
     <div className={(isBiggerThanMobile && "nav-arrow") || "hidden"} id="left-arrow">&#10094;</div>
-    <div className={(isBiggerThanMobile && "nav-arrow") || "hidden"} id="right-arrow">&#10095;</div>
+    <div className={(isBiggerThanMobile && "nav-arrow") || "hidden"} id="right-arrow" onClick={myFunc()}>&#10095;</div>
     <header><span className='red-letters'>Street</span><span className='green-letters'> food</span></header>
     <div className={(isBiggerThanMobile && "slidable-cards cards-class") || "cards-class"} style={{left: position + 'px'}}>
         <div className={(isBiggerThanMobile && "food-card-tablet") || "food-card first-group-card"}>

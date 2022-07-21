@@ -361,11 +361,21 @@ a, a:hover, a:focus, a:active, a:visited {
 /************************************************************** Services END*/
 
 /************************************************************** Products START*/
+
+.slidable-cards {
+    display: flex;
+    position: relative;
+    overflow-x: hidden;
+    flex-direction: row !important;
+    padding-left: 5vw;
+}
+
 #street-food {
     position: relative;
 }
 
 .nav-arrow {
+    top: 38%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -374,38 +384,29 @@ a, a:hover, a:focus, a:active, a:visited {
     width: 60px;
     font-size: 30px;
     font-weight: bold;
+    background-color:rgba(255, 222, 173, 0.2);
 }
 
 .nav-arrow:hover {
     cursor: pointer;
-    opacity: 1;
+    background-color:rgba(255, 222, 173, 0.8);
 }
 
 #right-arrow {
-    top: 38%;
     right:0;
-    background-color:rgba(0, 255, 0, 0.2);
     border-radius: 25px 0 0 25px
 }
 
 #right-arrow:hover {
     cursor: pointer;
-    background-color:rgba(0, 255, 0, 1);
+    background-color:rgba(255, 222, 173, 0.8);
 }
 
 #left-arrow {
-    top: 38%;
-    background-color:rgba(255, 0, 0, 0.2);
     border-radius: 0 25px 25px 0
 }
 
-#left-arrow:hover {
-    cursor: pointer;
-    background-color:rgba(255, 0, 0, 1);
-}
-
 .food-photo {
-    background-image: url('./images/langos1.jpg');
     height: 70vw;
     width: 70vw;
     background-size: cover;
@@ -416,19 +417,25 @@ a, a:hover, a:focus, a:active, a:visited {
 .food-photo-tablet {
     height: 250px;
     width: 250px;
-    background-image: url('./images/langos1.jpg');
     background-size: cover;
     background-position: center;
     border-radius: 25px;
 }
 
-.food-photo2 {
-    background-image: url('./images/gulyas.jpg');
-    height: 70vw;
-    width: 70vw;
-    background-size: cover;
-    background-position: center;
-    border-radius: 25px;
+#str-food-1 {
+    background-image: url('./images/langos1.jpg');
+}
+
+#str-food-2 {
+    background-image: url('https://images.unsplash.com/photo-1613482084286-41f25b486fa2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1974&q=80');
+}
+
+#str-food-3 {
+    background-image: url('https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=699&q=80');
+}
+
+#str-food-4 {
+    background-image: url('https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=699&q=80');
 }
 
 .food-card {
@@ -439,6 +446,15 @@ a, a:hover, a:focus, a:active, a:visited {
     width: 75%;
     border-top: 2px solid green;
     border-bottom: 2px solid red;
+    padding: 6vw;
+}
+
+.food-card-tablet {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2px;
+    width: 75%;
     padding: 6vw;
 }
 

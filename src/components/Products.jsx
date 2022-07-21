@@ -1,24 +1,32 @@
 import React from "react";
+import { useMediaQuery } from "react-responsive";
 import Separator from './Separator';
 
 
 export default function Products() {
+
+  const isBiggerThanMobile = useMediaQuery({
+  query: '(min-width: 425px)'
+  })
+
   return <>
-    <div id='street-food' className='products'>
+  <div id={isBiggerThanMobile && "street-food"} className='products'>
+    <div className={(isBiggerThanMobile && "nav-arrow") || "hidden"} id="left-arrow">&#10094;</div>
+    <div className={(isBiggerThanMobile && "nav-arrow") || "hidden"} id="right-arrow">&#10095;</div>
     <header><span className='red-letters'>Street</span><span className='green-letters'> food</span></header>
     <div className="cards-class">
         <div className="food-card first-group-card">
-          <div className="food-photo"></div>
+          <div className={(isBiggerThanMobile && "food-photo-tablet") ||"food-photo"}></div>
           <div className="food-card-description">Sajtos-tejfolos-zoldseges langos</div>
           <div className="price">£6.45</div>
         </div>
-        <div className="food-card">
-          <div className="food-photo"></div>
+        <div className={(isBiggerThanMobile && "hidden") || "food-card"}>
+          <div className={(isBiggerThanMobile && "food-photo-tablet") ||"food-photo"}></div>
           <div className="food-card-description">Sajtos-tejfolos-zoldseges langos</div>
           <div className="price">£6.45</div>
         </div>
-        <div className="food-card last-group-card">
-          <div className="food-photo"></div>
+        <div className={(isBiggerThanMobile && "hidden") || "food-card last-group-card"}>
+          <div className={(isBiggerThanMobile && "food-photo-tablet") ||"food-photo"}></div>
           <div className="food-card-description">Sajtos-tejfolos-zoldseges langos</div>
           <div className="price">£6.45</div>
         </div>

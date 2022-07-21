@@ -1,6 +1,5 @@
 import React, { useReducer } from "react";
 import { useMediaQuery } from "react-responsive";
-// import logo from '../images/H-langos.png'
 
 
 const initialState = {
@@ -10,10 +9,6 @@ const initialState = {
 }
 
 export default function Navbar() {
-
-  // const isBiggerThanMobile = useMediaQuery({
-  // query: '(min-width: 425px)'
-  // })
 
   const isBiggerThanTablet = useMediaQuery({
   query: '(min-width: 768px)'

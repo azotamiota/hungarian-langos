@@ -17,17 +17,17 @@ export default function Products() {
     <div className="cards-class">
         <div className="food-card first-group-card">
           <div className={(isBiggerThanMobile && "food-photo-tablet") ||"food-photo"}></div>
-          <div className="food-card-description">Sajtos-tejfolos-zoldseges langos</div>
+          <div className="food-card-description">Langos with sour-cream, cheese and vegetables</div>
           <div className="price">£6.45</div>
         </div>
         <div className={(isBiggerThanMobile && "hidden") || "food-card"}>
           <div className={(isBiggerThanMobile && "food-photo-tablet") ||"food-photo"}></div>
-          <div className="food-card-description">Sajtos-tejfolos-zoldseges langos</div>
+          <div className="food-card-description">Hot dig</div>
           <div className="price">£6.45</div>
         </div>
         <div className={(isBiggerThanMobile && "hidden") || "food-card last-group-card"}>
           <div className={(isBiggerThanMobile && "food-photo-tablet") ||"food-photo"}></div>
-          <div className="food-card-description">Sajtos-tejfolos-zoldseges langos</div>
+          <div className="food-card-description">Hamgurger</div>
           <div className="price">£6.45</div>
         </div>
     </div>
@@ -38,17 +38,17 @@ export default function Products() {
     <div className="cards-class">
         <div className="food-card first-group-card">
           <div className="food-photo2"></div>
-          <div className="food-card-description">Hagyomanyos magyar gulyas</div>
+          <div className="food-card-description">Gulash</div>
           <div className="price">£7.15</div>
         </div>
         <div className="food-card">
           <div className="food-photo2"></div>
-          <div className="food-card-description">Hagyomanyos magyar gulyas</div>
+          <div className="food-card-description">Noodles</div>
           <div className="price">£7.15</div>
         </div>
         <div className="food-card last-group-card">
           <div className="food-photo2"></div>
-          <div className="food-card-description">Hagyomanyos magyar gulyas</div>
+          <div className="food-card-description">Rice</div>
           <div className="price">£7.15</div>
         </div>
     </div>
@@ -64,7 +64,7 @@ export default function Products() {
         </div>
         <div className="food-card">
           <div className="drink-photo"></div>
-          <div className="food-card-description">Forralt bor</div>
+          <div className="food-card-description">Mulled wine</div>
           <div className="price">£0.85</div>
         </div>
         <div className="food-card last-group-card">

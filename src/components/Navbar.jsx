@@ -19,7 +19,7 @@ export default function Navbar() {
       case "SET_MULTIPLE":
         return {
           navbarVisibility: state.navbarVisibility === 'hide-section' ? 'show-section' : 'hide-section',
-          hamburgerMenuState: state.hamburgerMenuState === 'cross' ? '' : 'cross'
+          hamburgerMenuState: state.hamburgerMenuState === 'cross' ? 'false' : 'cross'
         }
         default:
           console.log('Something went wrong');
@@ -41,14 +41,14 @@ export default function Navbar() {
               <div className="bar2"></div>
               <div className="bar3"></div>
           </div>}
-    <ul id={(!isBiggerThanTablet && "nav-links") || "nav-links-tablet"} className={!isBiggerThanTablet && state.navbarVisibility}>
-              <li><a onClick={!isBiggerThanTablet && (() => dispatch({type: "SET_MULTIPLE"}))} href='#hero'>Home</a></li>
-              <li><a onClick={!isBiggerThanTablet && (() => dispatch({type: "SET_MULTIPLE"}))} href="#food-groups">Finomsagaink</a></li>
-              <li><a onClick={!isBiggerThanTablet && (() => dispatch({type: "SET_MULTIPLE"}))} href="#street-food">Street Food</a></li>
-              <li><a onClick={!isBiggerThanTablet && (() => dispatch({type: "SET_MULTIPLE"}))} href="#bowls">Egytal etelek</a></li>
-              <li><a onClick={!isBiggerThanTablet && (() => dispatch({type: "SET_MULTIPLE"}))} href="#drinks">Italok</a></li>
-              <li><a onClick={!isBiggerThanTablet && (() => dispatch({type: "SET_MULTIPLE"}))} href="#location">Location</a></li>
-              <li><a onClick={!isBiggerThanTablet && (() => dispatch({type: "SET_MULTIPLE"}))} href="#footer-icons">Contact</a></li>
+    <ul id={(!isBiggerThanTablet && "nav-links") || "nav-links-tablet"} className={!isBiggerThanTablet ? state.navbarVisibility : 'false'}>
+              <li><a onClick={!isBiggerThanTablet ? () => dispatch({type: "SET_MULTIPLE"}) : null} href='#hero'>Home</a></li>
+              <li><a onClick={!isBiggerThanTablet ? () => dispatch({type: "SET_MULTIPLE"}) : null} href="#food-groups">Menu</a></li>
+              <li><a onClick={!isBiggerThanTablet ? () => dispatch({type: "SET_MULTIPLE"}) : null} href="#street-food">Street Food</a></li>
+              <li><a onClick={!isBiggerThanTablet ? () => dispatch({type: "SET_MULTIPLE"}) : null} href="#bowls">Bowls</a></li>
+              <li><a onClick={!isBiggerThanTablet ? () => dispatch({type: "SET_MULTIPLE"}) : null} href="#drinks">Drinks</a></li>
+              <li><a onClick={!isBiggerThanTablet ? () => dispatch({type: "SET_MULTIPLE"}) : null} href="#location">Location</a></li>
+              <li><a onClick={!isBiggerThanTablet ? () => dispatch({type: "SET_MULTIPLE"}) : null} href="#footer-icons">Contact</a></li>
     </ul>
   </div>
   </>

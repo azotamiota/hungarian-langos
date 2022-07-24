@@ -11,10 +11,10 @@ export default function Hero() {
   return <>
     <div id="hero">
         <div id="hero-header">
-          <header style={{"text-align": "end","font-size": "30px"}}><u>Best</u> Streetfood<br/>in <strong>Bristol</strong><hr/></header>
+          <header style={{"textAlign": "end","fontSize": "30px"}}><u>Best</u> Streetfood<br/>in <strong>Bristol</strong><hr/></header>
         </div>
         {/* <img id='letter-icon' src={logo} alt=""/> */}
-      <div id={(!isBiggerThanMobile && "introduction") || "introduction-tablet"}>Ide johet valami bevezeto szoveg, valami frappans leiras a helyrol, mirol hires, mi a legfinomabb...stb.</div>
+      <div id={(!isBiggerThanMobile && "introduction") || "introduction-tablet"}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent in ligula odio. Etiam porttitor neque eget maximus blandit. Vestibulum id ante sit amet eros elementum ullamcorper.</div>
     </div>
   </>;
 }

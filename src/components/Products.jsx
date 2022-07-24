@@ -22,17 +22,17 @@ export default function Products() {
     <header><span className='red-letters'>Street</span><span className='green-letters'> food</span></header>
     <div className="cards-class">
         <div className="food-card first-group-card">
-          <div className={(isBiggerThanMobile && "food-photo-tablet") ||"food-photo"}></div>
+          <div id='str-food-1' className={(isBiggerThanMobile && "food-photo-tablet") ||"food-photo"}></div>
           <div className="food-card-description">Langos with sour-cream, cheese and vegetables</div>
           <div className="price">£6.45</div>
         </div>
         <div className={(isBiggerThanMobile && "hidden") || "food-card"}>
-          <div className={(isBiggerThanMobile && "food-photo-tablet") ||"food-photo"}></div>
+          <div id='str-food-2' className={(isBiggerThanMobile && "food-photo-tablet") ||"food-photo"}></div>
           <div className="food-card-description">Hot dig</div>
           <div className="price">£6.45</div>
         </div>
         <div className={(isBiggerThanMobile && "hidden") || "food-card last-group-card"}>
-          <div className={(isBiggerThanMobile && "food-photo-tablet") ||"food-photo"}></div>
+          <div id='str-food-3' className={(isBiggerThanMobile && "food-photo-tablet") ||"food-photo"}></div>
           <div className="food-card-description">Hamgurger</div>
           <div className="price">£6.45</div>
         </div>
@@ -40,20 +40,20 @@ export default function Products() {
   </div>
   <Separator />
   <div id='bowls' className='products'>
-    <header><span className='red-letters'>Egytal</span><span className='green-letters'> etelek</span></header>
+    <header><span className='red-letters'>Bo</span><span className='green-letters'>wls</span></header>
     <div className="cards-class">
         <div className="food-card first-group-card">
-          <div className="food-photo2"></div>
+          <div id='str-food-4' className="food-photo"></div>
           <div className="food-card-description">Gulash</div>
           <div className="price">£7.15</div>
         </div>
         <div className="food-card">
-          <div className="food-photo2"></div>
+          <div id='str-food-5' className="food-photo"></div>
           <div className="food-card-description">Noodles</div>
           <div className="price">£7.15</div>
         </div>
         <div className="food-card last-group-card">
-          <div className="food-photo2"></div>
+          <div id='str-food-6' className="food-photo"></div>
           <div className="food-card-description">Rice</div>
           <div className="price">£7.15</div>
         </div>
@@ -61,7 +61,7 @@ export default function Products() {
   </div>
   <Separator />
   <div id='drinks' className='products'>
-    <header><span className='red-letters'>Ita</span><span className='green-letters'>lok</span></header>
+    <header><span className='red-letters'>Dri</span><span className='green-letters'>nks</span></header>
     <div className="cards-class">
         <div className="food-card first-group-card">
           <div className="drink-photo"></div>

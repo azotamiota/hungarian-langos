@@ -365,7 +365,7 @@ a, a:hover, a:focus, a:active, a:visited {
 .slidable-cards {
     display: flex;
     position: relative;
-    overflow-x: hidden;
+    overflow-x: scroll;
     flex-direction: row !important;
     padding-left: 5vw;
 }
@@ -452,9 +452,9 @@ a, a:hover, a:focus, a:active, a:visited {
     align-items: center;
     margin: 2px;
     width: 75%;
+    padding: 6vw;
     border-top: 2px solid green;
     border-bottom: 2px solid red;
-    padding: 6vw;
 }
 
 .food-card-tablet {

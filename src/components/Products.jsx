@@ -12,7 +12,7 @@ export default function Products() {
   const [position, setPosition] = useState(0)
 
   function myFunc(e) {
-    console.log('kurva anyad')
+    console.log('sthing')
   }
 
   return <>
@@ -20,18 +20,18 @@ export default function Products() {
     <div className={(isBiggerThanMobile && "nav-arrow") || "hidden"} id="left-arrow">&#10094;</div>
     <div className={(isBiggerThanMobile && "nav-arrow") || "hidden"} id="right-arrow" onClick={myFunc()}>&#10095;</div>
     <header><span className='red-letters'>Street</span><span className='green-letters'> food</span></header>
-    <div className="cards-class">
-        <div className="food-card first-group-card">
+    <div className={(isBiggerThanMobile && "slidable-cards") ||"cards-class"}>
+        <div className={(isBiggerThanMobile && "food-card-tablet") || "food-card first-group-card"}>
           <div id='str-food-1' className={(isBiggerThanMobile && "food-photo-tablet") ||"food-photo"}></div>
           <div className="food-card-description">Langos with sour-cream, cheese and vegetables</div>
           <div className="price">£6.45</div>
         </div>
-        <div className={(isBiggerThanMobile && "hidden") || "food-card"}>
+        <div className={(isBiggerThanMobile && "food-card-tablet") || "food-card"}>
           <div id='str-food-2' className={(isBiggerThanMobile && "food-photo-tablet") ||"food-photo"}></div>
           <div className="food-card-description">Hot dig</div>
           <div className="price">£6.45</div>
         </div>
-        <div className={(isBiggerThanMobile && "hidden") || "food-card last-group-card"}>
+        <div className={(isBiggerThanMobile && "food-card-tablet") || "food-card last-group-card"}>
           <div id='str-food-3' className={(isBiggerThanMobile && "food-photo-tablet") ||"food-photo"}></div>
           <div className="food-card-description">Hamgurger</div>
           <div className="price">£6.45</div>

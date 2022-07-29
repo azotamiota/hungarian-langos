@@ -10,26 +10,38 @@ export default function Products() {
   })
   
   const [position, setPosition] = useState(0)
-  if (position < 0) {
-        setPosition(0)
-      }
+
+     if (position > 0) {
+          setPosition(0)
+        }
+    // if (Math.abs(position) > window.innerWidth - document.querySelector('.food-card-tablet').offsetWidth * 3) {
+    //     // setPosition(0 - (window.innerWidth - document.querySelector('.food-card-tablet').offsetWidth * 3))
+    //     console.log('something here');
+    // }
+   
   useEffect(() => {
     
-      document.querySelector('.slidable-cards').style.right = `${position}px`
-         
-  })
+      document.querySelector('.slidable-cards').style.left = `${position}px`;
+             
+  }, [position]) // only re-run the effect if position changes 
+
+  if (document.querySelector('.food-card-tablet').current) {
+    console.log(document.querySelector('.food-card-tablet').current.offsetWidth * 3 );
+  } else {
+    console.log(0)
+  }
 
   return <>
   <div id={isBiggerThanMobile && "street-food"} className='products'>
     <div className={(isBiggerThanMobile && "nav-arrow") || "hidden"} id="left-arrow" onClick={() => {
-      if (position > 0) {
-        setPosition(position - window.innerWidth / 2)
-      }
+      
+        setPosition(position + window.innerWidth / 2)
+      
     }}>&#10094;</div>
     <div className={(isBiggerThanMobile && "nav-arrow") || "hidden"} id="right-arrow" onClick={() => {
-      if (position >= 0) {
-        setPosition(position + window.innerWidth / 2)
-      }
+      
+        setPosition(position - window.innerWidth / 2)
+      
     }}>&#10095;</div>
     <header><span className='red-letters'>Street</span><span className='green-letters'> food</span></header>
       {/* // style={{"right": `${position}`}} */}

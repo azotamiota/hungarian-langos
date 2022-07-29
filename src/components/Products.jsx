@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useMediaQuery } from "react-responsive";
 import Separator from './Separator';
 
@@ -10,17 +10,30 @@ export default function Products() {
   })
   
   const [position, setPosition] = useState(0)
-
-  function myFunc(e) {
-    console.log('sthing')
-  }
+  if (position < 0) {
+        setPosition(0)
+      }
+  useEffect(() => {
+    
+      document.querySelector('.slidable-cards').style.right = `${position}px`
+         
+  })
 
   return <>
   <div id={isBiggerThanMobile && "street-food"} className='products'>
-    <div className={(isBiggerThanMobile && "nav-arrow") || "hidden"} id="left-arrow">&#10094;</div>
-    <div className={(isBiggerThanMobile && "nav-arrow") || "hidden"} id="right-arrow" onClick={myFunc()}>&#10095;</div>
+    <div className={(isBiggerThanMobile && "nav-arrow") || "hidden"} id="left-arrow" onClick={() => {
+      if (position > 0) {
+        setPosition(position - window.innerWidth / 2)
+      }
+    }}>&#10094;</div>
+    <div className={(isBiggerThanMobile && "nav-arrow") || "hidden"} id="right-arrow" onClick={() => {
+      if (position >= 0) {
+        setPosition(position + window.innerWidth / 2)
+      }
+    }}>&#10095;</div>
     <header><span className='red-letters'>Street</span><span className='green-letters'> food</span></header>
-    <div className={(isBiggerThanMobile && "slidable-cards") ||"cards-class"}>
+      {/* // style={{"right": `${position}`}} */}
+    <div id="moveable-street-food" className={(isBiggerThanMobile && "slidable-cards") ||"cards-class"}> 
         <div className={(isBiggerThanMobile && "food-card-tablet") || "food-card first-group-card"}>
           <div id='str-food-1' className={(isBiggerThanMobile && "food-photo-tablet") ||"food-photo"}></div>
           <div className="food-card-description">Langos with sour-cream, cheese and vegetables</div>

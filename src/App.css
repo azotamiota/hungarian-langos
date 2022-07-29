@@ -365,9 +365,10 @@ a, a:hover, a:focus, a:active, a:visited {
 .slidable-cards {
     display: flex;
     position: relative;
-    overflow-x: scroll;
+    /* overflow-x: scroll; */
     flex-direction: row !important;
     padding-left: 5vw;
+    transition: 1s;
 }
 
 #street-food {
@@ -384,7 +385,8 @@ a, a:hover, a:focus, a:active, a:visited {
     width: 60px;
     font-size: 30px;
     font-weight: bold;
-    background-color:rgba(255, 222, 173, 0.2);
+    background-color:rgba(255, 222, 173, 0.7);
+    z-index: 99;
 }
 
 .nav-arrow:hover {

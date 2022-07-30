@@ -10,37 +10,63 @@ export default function Products() {
   })
   
   const [position, setPosition] = useState(0)
+  const [widthDiff, setWidthDiff] = useState(0)
+  
+   if (position > 0) {
+        setPosition(0)
+      }
 
-     if (position > 0) {
-          setPosition(0)
-        }
-    // if (Math.abs(position) > window.innerWidth - document.querySelector('.food-card-tablet').offsetWidth * 3) {
-    //     // setPosition(0 - (window.innerWidth - document.querySelector('.food-card-tablet').offsetWidth * 3))
-    //     console.log('something here');
-    // }
-   
+    // let widthDiffs;
+    // if (slidableWidth > 0) {
+    //   if (Math.abs(position) > window.innerWidth - slidableWidth) {
+    //   setPosition(window.innerWidth - window.innerWidth - slidableWidth)
+    //   }
+    // }   
+
   useEffect(() => {
     
-      document.querySelector('.slidable-cards').style.left = `${position}px`;
-             
+    document.querySelector('.slidable-cards').style.left = `${position}px`;
+    // if (document.querySelector('.food-card-tablet')) {
+    //     console.log('if food card tablet class exist: ',Boolean(document.querySelector('.food-card-tablet')));
+    //   } else {
+    //     console.log(0)
+    //   }
   }, [position]) // only re-run the effect if position changes 
 
-  if (document.querySelector('.food-card-tablet').current) {
-    console.log(document.querySelector('.food-card-tablet').current.offsetWidth * 3 );
-  } else {
-    console.log(0)
-  }
 
   return <>
-  <div id={isBiggerThanMobile && "street-food"} className='products'>
+  <div id={(isBiggerThanMobile && "street-food") || 'false'} className='products'>
     <div className={(isBiggerThanMobile && "nav-arrow") || "hidden"} id="left-arrow" onClick={() => {
-      
-        setPosition(position + window.innerWidth / 2)
-      
+      if (position < 0) {
+         setPosition(position + window.innerWidth / 2)
+        } else {
+          setPosition(0)
+        }
     }}>&#10094;</div>
     <div className={(isBiggerThanMobile && "nav-arrow") || "hidden"} id="right-arrow" onClick={() => {
+      setWidthDiff(document.querySelector('.food-card-tablet').offsetWidth * 3 - window.innerWidth) //widthDiff will be  +200
+      if (position === 0) {
+        if (document.querySelector('.food-card-tablet').offsetWidth * 3 - window.innerWidth < window.innerWidth / 2) {
+          setPosition(0 - widthDiff);
+          document.querySelector('.slidable-cards').style.left = `${window.innerWidth - document.querySelector('.food-card-tablet').offsetWidth * 3}px`;
+          console.log('position should be negative number here: ', position);
+            return     //position will be -400
+        } else {
+          setPosition(position - window.innerWidth / 2)
+        }
+      } else
+      if (Math.abs(position) + window.innerWidth / 2 > widthDiff) {
+        setPosition(0 - widthDiff)     //position will be -400
+      } else {
+        setPosition(position - window.innerWidth / 2)     //position will be -400
+      }
       
-        setPosition(position - window.innerWidth / 2)
+      // if (Math.abs(position) > widthDiff)  {
+      //   setPosition(0 - widthDiff)
+      // }
+
+       
+        console.log('position after: ', position, 'barlength - windowlength: ', widthDiff)
       
     }}>&#10095;</div>
     <header><span className='red-letters'>Street</span><span className='green-letters'> food</span></header>

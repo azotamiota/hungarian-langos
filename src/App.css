@@ -1,6 +1,6 @@
-* {
+/* * {
     border: 1px solid red;
-}
+} */
 
 html, body {
      font-family: 'Arvo', serif;
@@ -367,7 +367,7 @@ a, a:hover, a:focus, a:active, a:visited {
     position: relative;
     /* overflow-x: scroll; */
     flex-direction: row !important;
-    padding-left: 5vw;
+    /* padding-left: 5vw; */
     transition: 1s;
 }
 
@@ -463,9 +463,9 @@ a, a:hover, a:focus, a:active, a:visited {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 2px;
+    /* margin: 2px; */
     width: 75%;
-    padding: 6vw;
+    padding: 15px 30px;
 }
 
 .hidden {

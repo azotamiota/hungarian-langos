@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import  { React, useEffect, useState } from "react";
 import { useMediaQuery } from "react-responsive";
 import Separator from './Separator';
 

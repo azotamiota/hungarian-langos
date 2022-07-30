@@ -299,6 +299,10 @@ a, a:hover, a:focus, a:active, a:visited {
     margin: 0;
 }
 
+#left-arrow-food-group, #right-arrow-food-group{
+    top: 58%;
+}
+
 .cards-class {
     display: flex;
     flex-direction: column;
@@ -312,6 +316,12 @@ a, a:hover, a:focus, a:active, a:visited {
     flex-direction: row !important;
     /* padding-left: 5vw; */
     transition: 1s;
+}
+
+.group-card-tablet {
+    border: 3px solid #deb06c;
+    border-radius: 25px;
+    margin: 0 20px;
 }
 
 .card {
@@ -398,7 +408,7 @@ a, a:hover, a:focus, a:active, a:visited {
     background-color:rgba(255, 222, 173, 0.8);
 }
 
-#right-arrow {
+#right-arrow, #right-arrow-food-group {
     right:0;
     border-radius: 25px 0 0 25px
 }
@@ -408,7 +418,7 @@ a, a:hover, a:focus, a:active, a:visited {
     background-color:rgba(255, 222, 173, 0.8);
 }
 
-#left-arrow {
+#left-arrow, #left-arrow-food-group {
     border-radius: 0 25px 25px 0
 }
 
@@ -463,13 +473,13 @@ a, a:hover, a:focus, a:active, a:visited {
     border-bottom: 2px solid red;
 }
 
-.food-card-tablet {
+.food-card-tablet, .group-card-tablet {
     display: flex;
     flex-direction: column;
     align-items: center;
     /* margin: 2px; */
     width: 75%;
-    padding: 15px 30px;
+    padding: 15px 35px;
 }
 
 .hidden {

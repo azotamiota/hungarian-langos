@@ -25,12 +25,9 @@ export default function Products() {
 
   useEffect(() => {
     
-    document.querySelector('.slidable-cards').style.left = `${position}px`;
-    // if (document.querySelector('.food-card-tablet')) {
-    //     console.log('if food card tablet class exist: ',Boolean(document.querySelector('.food-card-tablet')));
-    //   } else {
-    //     console.log(0)
-    //   }
+    if (document.querySelector('.slidable-cards')) {
+      document.querySelector('.slidable-cards').style.left = `${position}px`;
+    }
   }, [position]) // only re-run the effect if position changes 
 
 
@@ -44,11 +41,11 @@ export default function Products() {
         }
     }}>&#10094;</div>
     <div className={(isBiggerThanMobile && "nav-arrow") || "hidden"} id="right-arrow" onClick={() => {
-      setWidthDiff(document.querySelector('.food-card-tablet').offsetWidth * 3 - window.innerWidth) //widthDiff will be  +200
+      setWidthDiff(900 - window.innerWidth) //widthDiff will be  +200
       if (position === 0) {
-        if (document.querySelector('.food-card-tablet').offsetWidth * 3 - window.innerWidth < window.innerWidth / 2) {
+        if (900 - window.innerWidth < window.innerWidth / 2) {
           setPosition(0 - widthDiff);
-          document.querySelector('.slidable-cards').style.left = `${window.innerWidth - document.querySelector('.food-card-tablet').offsetWidth * 3}px`;
+          document.querySelector('.slidable-cards').style.left = `${window.innerWidth - 900}px`;
           console.log('position should be negative number here: ', position);
             return     //position will be -400
         } else {

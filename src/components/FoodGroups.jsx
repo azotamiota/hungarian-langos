@@ -24,8 +24,9 @@ export default function FoodGroups() {
     // }   
 
   useEffect(() => {
-    
-    document.querySelector('.cards-class-tablet').style.left = `${position}px`;
+    if (document.querySelector('.cards-class-tablet')) {
+      document.querySelector('.cards-class-tablet').style.left = `${position}px`;
+    }
     // if (document.querySelector('.food-card-tablet')) {
     //     console.log('if food card tablet class exist: ',Boolean(document.querySelector('.food-card-tablet')));
     //   } else {

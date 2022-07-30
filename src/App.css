@@ -1,10 +1,11 @@
-/* * {
+* {
     border: 1px solid red;
-} */
+}
 
 html, body {
      font-family: 'Arvo', serif;
      overflow-x: hidden;
+     box-sizing: border-box;
 }
 
 #to-top {
@@ -292,6 +293,10 @@ a, a:hover, a:focus, a:active, a:visited {
     text-align:center;
 }
 
+.card-class-tablet:hover {
+    cursor: pointer;
+}
+
 #services-description {
     text-align: justify;
     padding: 1em;
@@ -392,6 +397,7 @@ a, a:hover, a:focus, a:active, a:visited {
 .nav-arrow {
     top: 38%;
     display: flex;
+    /* visibility: hidden; */
     justify-content: center;
     align-items: center;
     position: absolute;
@@ -399,8 +405,9 @@ a, a:hover, a:focus, a:active, a:visited {
     width: 60px;
     font-size: 30px;
     font-weight: bold;
-    background-color:rgba(255, 222, 173, 0.7);
+    background-color:rgba(255, 222, 173, 0.3);
     z-index: 99;
+    transition: 0.5s
 }
 
 .nav-arrow:hover {

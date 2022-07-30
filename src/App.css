@@ -306,9 +306,12 @@ a, a:hover, a:focus, a:active, a:visited {
 }
 
 .cards-class-tablet {
-    display: grid;
-    grid-template-columns: 32% 32% 32%;
-    justify-content: center;
+    display: flex;
+    position: relative;
+    /* overflow-x: scroll; */
+    flex-direction: row !important;
+    /* padding-left: 5vw; */
+    transition: 1s;
 }
 
 .card {
@@ -328,7 +331,7 @@ a, a:hover, a:focus, a:active, a:visited {
     align-items: center;
     margin: 5px;
     border: 3px solid #deb06c;
-    padding: 15px 7px;
+    padding: 15px 30px;
     border-radius: 25px;
 }
 
@@ -346,6 +349,7 @@ a, a:hover, a:focus, a:active, a:visited {
     margin: 15px 0;
     text-align: start;
     letter-spacing: -1px;
+    width: 250px;
 }
 
 .button {

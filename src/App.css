@@ -86,7 +86,7 @@ header {
     width: 70%;
     height: 60px;
     margin-block-start: 0;
-    font-size: 16px;
+    font-size: 20px;
     z-index: 100;
     background-color: white;
     margin-block-end: 0;
@@ -231,6 +231,14 @@ hr {
     margin: 0 auto;
     width: 75vw;
     text-align: justify;
+}
+
+#introduction-laptop {
+    letter-spacing: 2px;
+    font-size: 30px;
+    margin: 0 auto;
+    width: 75vw;
+    text-align: left;
 }
 
  #introduction::after, #introduction-tablet::after {

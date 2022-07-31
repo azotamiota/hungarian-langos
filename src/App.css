@@ -705,4 +705,12 @@ footer {
     width: 60%;
     height: 400px;
   }
+
+  #brand-logos {
+    justify-content: end;
+  }
+
+  .brand-logo {
+    padding: 0 4vw;
+  }
 }

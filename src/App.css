@@ -263,6 +263,12 @@ hr {
     border-radius: 50%;
 }
 
+.logo-laptop {
+    width: 80px;
+    height: auto;
+    border-radius: 50%;
+}
+
 .separator {
     margin: 3em auto 2em auto;
     display: flex;
@@ -270,6 +276,17 @@ hr {
     position: relative;
     height: 5px;
     width: 80vw;
+    background-color: #deb06c;
+    border-radius: 50%;
+}
+
+.separator-laptop {
+    margin: 3em auto 4em auto;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    height: 15px;
+    width: 90vw;
     background-color: #deb06c;
     border-radius: 50%;
 }
@@ -282,6 +299,17 @@ hr {
     width: 20vw;
     height:auto;
     background-color: white;
+}
+
+.separator-logo-laptop {
+    position: absolute;
+    /* top: -350%; */
+    display: flex;
+    justify-content: center;
+    width: 15vw;
+    height: auto;
+    background-color: white;
+    bottom: -37px;
 }
 
 /************************************************************** Separator END*/
@@ -392,7 +420,7 @@ a, a:hover, a:focus, a:active, a:visited {
 .slidable-cards {
     display: flex;
     position: relative;
-    overflow-x: scroll;
+    overflow-x: auto;
     flex-direction: row !important;
     /* padding-left: 5vw; */
     transition: 1s;
@@ -578,8 +606,10 @@ a, a:hover, a:focus, a:active, a:visited {
 }
 
 #google-map-tablet {
+    width: 320px;
+
     height: auto;
-    margin-top: 15px;
+    margin-top: 25px;
 }
 
 /************************************************************** Location END*/
@@ -645,4 +675,34 @@ footer {
 
 #copyright {
     padding: 1em;
+}
+
+@media screen and (min-width: 1024px) {
+
+    body {
+        font-size: 20px;
+    }
+
+  header {
+    font-size: 32px;
+  }
+
+  .price {
+    padding: 5px 60px;
+  }
+
+  .slidable-cards {
+    width: 60%;
+    margin: 0 auto;
+  }
+
+  #location {
+    margin-top: 70px;
+    font-size: 30px;
+  }
+  
+  #google-map-tablet {
+    width: 60%;
+    height: 400px;
+  }
 }

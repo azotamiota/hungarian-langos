@@ -77,7 +77,7 @@ export default function Products() {
         </div>
         <div className={(isBiggerThanMobile && "food-card-tablet") || "food-card"}>
           <div id='str-food-2' className={(isBiggerThanMobile && "food-photo-tablet") ||"food-photo"}></div>
-          <div className="food-card-description">Hot dig</div>
+          <div className="food-card-description">Hot dog</div>
           <div className="price">£6.45</div>
         </div>
         <div className={(isBiggerThanMobile && "food-card-tablet") || "food-card last-group-card"}>

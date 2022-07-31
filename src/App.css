@@ -235,7 +235,7 @@ hr {
 
 #introduction-laptop {
     letter-spacing: 0px;
-    font-size: 25px;
+    font-size: 22px;
     margin: 0 auto;
     width: 75vw;
     text-align: left;
@@ -684,7 +684,7 @@ footer {
     }
 
   header {
-    font-size: 32px;
+    font-size: 28px;
   }
 
   .price {
@@ -692,13 +692,13 @@ footer {
   }
 
   .slidable-cards {
-    width: 60%;
+    width: 65%;
     margin: 0 auto;
   }
 
   #location {
     margin-top: 70px;
-    font-size: 30px;
+    font-size: 28px;
   }
   
   #google-map-tablet {
@@ -712,5 +712,9 @@ footer {
 
   .brand-logo {
     padding: 0 4vw;
+  }
+
+  #copyright {
+    font-size: 14px;
   }
 }

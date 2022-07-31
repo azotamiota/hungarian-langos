@@ -234,8 +234,8 @@ hr {
 }
 
 #introduction-laptop {
-    letter-spacing: 2px;
-    font-size: 30px;
+    letter-spacing: 0px;
+    font-size: 25px;
     margin: 0 auto;
     width: 75vw;
     text-align: left;

@@ -5,7 +5,7 @@ import Hero from "./components/Hero";
 import Navbar from "./components/Navbar";
 import Products from "./components/Products";
 // import Testimonials from "./components/Testimonials";
-import FoodGroups from './components/FoodGroups';
+// import FoodGroups from './components/FoodGroups';
 import Separator from './components/Separator';
 import Location from './components/Location';
 

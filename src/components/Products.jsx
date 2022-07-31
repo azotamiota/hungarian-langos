@@ -10,7 +10,7 @@ export default function Products() {
   })
   
   const [position, setPosition] = useState(0)
-  const [widthDiff, setWidthDiff] = useState(0)
+  // const [widthDiff, setWidthDiff] = useState(0)
   
    if (position > 0) {
         setPosition(0)

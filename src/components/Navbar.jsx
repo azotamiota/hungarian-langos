@@ -43,7 +43,7 @@ export default function Navbar() {
           </div>}
     <ul id={(!isBiggerThanTablet && "nav-links") || "nav-links-tablet"} className={!isBiggerThanTablet ? state.navbarVisibility : 'false'}>
               <li><a onClick={!isBiggerThanTablet ? () => dispatch({type: "SET_MULTIPLE"}) : null} href='#hero'>Home</a></li>
-              <li><a onClick={!isBiggerThanTablet ? () => dispatch({type: "SET_MULTIPLE"}) : null} href="#food-groups">Menu</a></li>
+              {/* <li><a onClick={!isBiggerThanTablet ? () => dispatch({type: "SET_MULTIPLE"}) : null} href="#food-groups">Menu</a></li> */}
               <li><a onClick={!isBiggerThanTablet ? () => dispatch({type: "SET_MULTIPLE"}) : null} href="#street-food">Street Food</a></li>
               <li><a onClick={!isBiggerThanTablet ? () => dispatch({type: "SET_MULTIPLE"}) : null} href="#bowls">Bowls</a></li>
               <li><a onClick={!isBiggerThanTablet ? () => dispatch({type: "SET_MULTIPLE"}) : null} href="#drinks">Drinks</a></li>

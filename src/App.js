@@ -15,8 +15,8 @@ export default function App() {
     <Navbar />
     <Hero />
     <Separator />
-    <FoodGroups />
-    <Separator />
+    {/* <FoodGroups /> */}
+    {/* <Separator /> */}
     <Products />
     <Location />
     {/* <Testimonials /> */}

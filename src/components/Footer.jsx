@@ -33,9 +33,9 @@ export default function Footer() {
               <div className="brand-logo">
                 <a href='https://www.instagram.com/hungarian_langos_bs3/' target='blank'><i className="fa-lg fa-brands fa-instagram"></i></a>
               </div>
-              <div className="brand-logo">
+              {/* <div className="brand-logo">
                 <i className="fa-lg fa-brands fa-twitter"></i>
-              </div>
+              </div> */}
             </div>
         </div>
         <div id="copyright">Copyright &copy; <a href="https://azotamiota.github.io"><u>azotamiota</u></a> 2022</div>

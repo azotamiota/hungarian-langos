@@ -33,7 +33,8 @@ export default function Products() {
 
   return <>
   <div id={(isBiggerThanMobile && "street-food") || 'false'} className='products'>
-    <div className={(isBiggerThanMobile && "nav-arrow") || "hidden"} id="left-arrow" onClick={() => {
+
+    {/* <div className={(isBiggerThanMobile && "nav-arrow") || "hidden"} id="left-arrow" onClick={() => {
       if (position < 0) {
          setPosition(position + window.innerWidth / 2)
         } else {
@@ -65,7 +66,7 @@ export default function Products() {
        
         console.log('position after: ', position, 'barlength - windowlength: ', widthDiff)
       
-    }}>&#10095;</div>
+    }}>&#10095;</div> */}
     <header><span className='red-letters'>Street</span><span className='green-letters'> food</span></header>
       {/* // style={{"right": `${position}`}} */}
     <div id="moveable-street-food" className={(isBiggerThanMobile && "slidable-cards") ||"cards-class"}> 
@@ -89,19 +90,19 @@ export default function Products() {
   <Separator />
   <div id='bowls' className='products'>
     <header><span className='red-letters'>Bo</span><span className='green-letters'>wls</span></header>
-    <div className="cards-class">
-        <div className="food-card first-group-card">
-          <div id='str-food-4' className="food-photo"></div>
+    <div className={(isBiggerThanMobile && "slidable-cards") ||"cards-class"}>
+        <div className={(isBiggerThanMobile && "food-card-tablet") || "food-card first-group-card"}>
+          <div id='bowl-1' className={(isBiggerThanMobile && "food-photo-tablet") ||"food-photo"}></div>
           <div className="food-card-description">Gulash</div>
           <div className="price">£7.15</div>
         </div>
-        <div className="food-card">
-          <div id='str-food-5' className="food-photo"></div>
+        <div className={(isBiggerThanMobile && "food-card-tablet") || "food-card"}>
+          <div id='bowl-2' className={(isBiggerThanMobile && "food-photo-tablet") ||"food-photo"}></div>
           <div className="food-card-description">Noodles</div>
           <div className="price">£7.15</div>
         </div>
-        <div className="food-card last-group-card">
-          <div id='str-food-6' className="food-photo"></div>
+        <div className={(isBiggerThanMobile && "food-card-tablet") || "food-card last-group-card"}>
+          <div id='bowl-3' className={(isBiggerThanMobile && "food-photo-tablet") ||"food-photo"}></div>
           <div className="food-card-description">Rice</div>
           <div className="price">£7.15</div>
         </div>
@@ -110,20 +111,20 @@ export default function Products() {
   <Separator />
   <div id='drinks' className='products'>
     <header><span className='red-letters'>Dri</span><span className='green-letters'>nks</span></header>
-    <div className="cards-class">
-        <div className="food-card first-group-card">
-          <div className="drink-photo"></div>
-          <div className="food-card-description">Coca-cola</div>
+    <div className={(isBiggerThanMobile && "slidable-cards") ||"cards-class"}>
+        <div className={(isBiggerThanMobile && "food-card-tablet") || "food-card first-group-card"}>
+          <div id='drink-1' className={(isBiggerThanMobile && "food-photo-tablet") ||"food-photo"}></div>
+          <div className="food-card-description">Lemonade</div>
           <div className="price">£0.85</div>
         </div>
-        <div className="food-card">
-          <div className="drink-photo"></div>
-          <div className="food-card-description">Mulled wine</div>
+        <div className={(isBiggerThanMobile && "food-card-tablet") || "food-card"}>
+          <div id='drink-2' className={(isBiggerThanMobile && "food-photo-tablet") ||"food-photo"}></div>
+          <div className="food-card-description">Hot tea</div>
           <div className="price">£0.85</div>
         </div>
-        <div className="food-card last-group-card">
-          <div className="drink-photo"></div>
-          <div className="food-card-description">English breakfast tea</div>
+        <div className={(isBiggerThanMobile && "food-card-tablet") || "food-card last-group-card"}>
+          <div id='drink-3' className={(isBiggerThanMobile && "food-photo-tablet") ||"food-photo"}></div>
+          <div className="food-card-description">Beer</div>
           <div className="price">£0.85</div>
         </div>
     </div>

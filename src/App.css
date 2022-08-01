@@ -238,7 +238,7 @@ hr {
     letter-spacing: 0px;
     font-size: 22px;
     margin: 0 auto;
-    width: 75vw;
+    width: 60vw;
     text-align: left;
 }
 
@@ -589,6 +589,7 @@ a, a:hover, a:focus, a:active, a:visited {
     background-image:  linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.4)), url('https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80');
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: center;
 }
 
 #location-text {

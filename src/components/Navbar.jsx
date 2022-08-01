@@ -34,7 +34,7 @@ export default function Navbar() {
   return <>
   <div id="navbar-container">
     <div id={(!isBiggerThanTablet && "navbar") || 'navbar-tablet' }>
-        <header className='brand-header'><span className='red-letters'>Hungarian</span><span className='green-letters'> Langos</span></header>       
+        <header className='brand-header'><span className='red-letters'>Sample</span><span className='green-letters'> Name</span></header>       
     </div>
     {!isBiggerThanTablet && <div id="container" className={state.hamburgerMenuState} onClick={() => dispatch({type: "SET_MULTIPLE"})}>
               <div className="bar1"></div>

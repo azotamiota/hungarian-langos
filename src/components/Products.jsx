@@ -72,7 +72,7 @@ export default function Products() {
     <div id="moveable-street-food" className={(isBiggerThanMobile && "slidable-cards") ||"cards-class"}> 
         <div className={(isBiggerThanMobile && "food-card-tablet") || "food-card first-group-card"}>
           <div id='str-food-1' className={(isBiggerThanMobile && "food-photo-tablet") ||"food-photo"}></div>
-          <div className="food-card-description">Langos with sour-cream, cheese and vegetables</div>
+          <div className="food-card-description">Sample food</div>
           <div className="price">£6.45</div>
         </div>
         <div className={(isBiggerThanMobile && "food-card-tablet") || "food-card"}>
@@ -93,7 +93,7 @@ export default function Products() {
     <div className={(isBiggerThanMobile && "slidable-cards") ||"cards-class"}>
         <div className={(isBiggerThanMobile && "food-card-tablet") || "food-card first-group-card"}>
           <div id='bowl-1' className={(isBiggerThanMobile && "food-photo-tablet") ||"food-photo"}></div>
-          <div className="food-card-description">Gulash</div>
+          <div className="food-card-description">Beef stew</div>
           <div className="price">£7.15</div>
         </div>
         <div className={(isBiggerThanMobile && "food-card-tablet") || "food-card"}>

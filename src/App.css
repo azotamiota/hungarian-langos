@@ -658,7 +658,7 @@ footer {
 
 #brand-logos {
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: auto auto auto auto;
     margin-top: 15px;
     justify-content: center;
     padding: 1em 0;
@@ -668,7 +668,7 @@ footer {
 }
 
 .brand-logo {
-  padding: 0 11vw;
+  padding: 0 5vw;
   font-size: 30px;
   text-align: center;
 }
@@ -711,7 +711,7 @@ footer {
   }
 
   .brand-logo {
-    padding: 0 4vw;
+    padding: 0 1.5vw;
   }
 
   #copyright {

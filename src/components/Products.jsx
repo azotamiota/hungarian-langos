@@ -67,7 +67,7 @@ export default function Products() {
         console.log('position after: ', position, 'barlength - windowlength: ', widthDiff)
       
     }}>&#10095;</div> */}
-    <header><span className='red-letters'>Street</span><span className='green-letters'> food</span></header>
+    <header><span className='red-letters'>Starters &</span><span className='green-letters'> Appetisers</span></header>
       {/* // style={{"right": `${position}`}} */}
     <div id="moveable-street-food" className={(isBiggerThanMobile && "slidable-cards") ||"cards-class"}> 
         <div className={(isBiggerThanMobile && "food-card-tablet") || "food-card first-group-card"}>
@@ -77,19 +77,19 @@ export default function Products() {
         </div>
         <div className={(isBiggerThanMobile && "food-card-tablet") || "food-card"}>
           <div id='str-food-2' className={(isBiggerThanMobile && "food-photo-tablet") ||"food-photo"}></div>
-          <div className="food-card-description">Hot dog</div>
+          <div className="food-card-description">Mini hot-dog</div>
           <div className="price">£6.45</div>
         </div>
         <div className={(isBiggerThanMobile && "food-card-tablet") || "food-card last-group-card"}>
           <div id='str-food-3' className={(isBiggerThanMobile && "food-photo-tablet") ||"food-photo"}></div>
-          <div className="food-card-description">Hamgurger</div>
+          <div className="food-card-description">Noodle soup</div>
           <div className="price">£6.45</div>
         </div>
     </div>
   </div>
   <Separator />
   <div id='bowls' className='products'>
-    <header><span className='red-letters'>Bo</span><span className='green-letters'>wls</span></header>
+    <header><span className='red-letters'>Mai</span><span className='green-letters'>ns</span></header>
     <div className={(isBiggerThanMobile && "slidable-cards") ||"cards-class"}>
         <div className={(isBiggerThanMobile && "food-card-tablet") || "food-card first-group-card"}>
           <div id='bowl-1' className={(isBiggerThanMobile && "food-photo-tablet") ||"food-photo"}></div>
@@ -98,7 +98,7 @@ export default function Products() {
         </div>
         <div className={(isBiggerThanMobile && "food-card-tablet") || "food-card"}>
           <div id='bowl-2' className={(isBiggerThanMobile && "food-photo-tablet") ||"food-photo"}></div>
-          <div className="food-card-description">Noodles</div>
+          <div className="food-card-description">Hamburger</div>
           <div className="price">£7.15</div>
         </div>
         <div className={(isBiggerThanMobile && "food-card-tablet") || "food-card last-group-card"}>

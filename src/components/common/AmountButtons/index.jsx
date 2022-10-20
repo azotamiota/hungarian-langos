@@ -1,11 +1,17 @@
 import React, {useState} from 'react'
 import styles from './index.module.css'
-function AmountButtons() {
-  const [ count, setCount ] = useState(0) 
+function AmountButtons({amount, setTotal, price}) {
+  const [ count, setCount ] = useState(amount) 
   const addOne = (e) => {
     e.preventDefault()
     if (count < 10){
-      setCount(prev => prev + 1)
+      setCount(prev => {
+        let now = prev + 1
+        if (setTotal) {
+          setTotal((now*price).toFixed(2))
+        }
+        return now
+      })
     } else {
       alert('sorry, 10 is maximum number for one order')
     }
@@ -13,7 +19,13 @@ function AmountButtons() {
   const takeOne = (e) => {
     e.preventDefault()
     if (count > 0){
-      setCount(prev => prev - 1)
+      setCount(prev => {
+        let now = prev - 1
+        if (setTotal) {
+          setTotal((now*price).toFixed(2))
+        }
+        return now
+      })
     }
   }
 

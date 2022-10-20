@@ -8,8 +8,9 @@ function Basket() {
     {name: 'mini hot-dog', amount: 3, price: 1.45},
     {name: 'noodle soup', amount: 1, price: 6.45}
   ]
-  const [isShown, setIsShown] = useState(false);
-  const [basketData, setBasketData] = useState(data)
+  const [isShown, setIsShown] = useState(false)
+  const [ orderTotal, setOrderTotal] = useState(0)
+  const [basketData, setBasketData] = useState(data) //TODO has to be updated from redux
   return (
     <>
       <div className={styles.basketIcon} onClick={() => setIsShown(prev => !prev)}>
@@ -23,6 +24,19 @@ function Basket() {
             <BasketCard item={item} index={index}/>
           </div>))
           : 'Add your order to proceed'}</div>
+          <hr
+            style={{
+              background: 'lime',
+              color: 'lime',
+              borderColor: 'lime',
+              height: '3px',
+              width: '90%',
+            }}
+          />
+          <div className={styles.summary}>
+            <div>total: <span>{orderTotal}</span></div>
+            <button>Checkout</button> 
+          </div>
         </div>
       )}
     </>

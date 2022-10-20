@@ -6,7 +6,7 @@ function Product({isBiggerThanMobile, name, price, img}) {
       <img src={img} alt={name} className={(isBiggerThanMobile && "food-photo-tablet") ||"food-photo"}></img>
       <div className="food-card-description">{name}</div>
       <div className="price">{price}</div>
-      <AmountButtons />      
+      <AmountButtons amount={0}/>      
     </div>
   )
 }

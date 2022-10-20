@@ -1,0 +1,26 @@
+.basketIcon{
+  cursor: pointer;
+}
+
+.basket{
+  position: absolute;
+  right: 25vw;
+  top: 80px;
+  width: 50vw;
+  
+  height: 600px;
+  background-color: white;
+  outline: 1px solid blue;
+}
+
+.closeBasket {
+  cursor: pointer;
+  background-color: gray;
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

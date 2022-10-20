@@ -1,6 +1,6 @@
 import React from "react";
 import { useMediaQuery } from "react-responsive";
-import logo from '../images/H-langos.png'
+import logo from '../../../images/H-langos.png'
 
 export default function Separator() {
 

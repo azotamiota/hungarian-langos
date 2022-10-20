@@ -1,6 +1,6 @@
 import  { React, useEffect, useState } from "react";
 import { useMediaQuery } from "react-responsive";
-import Separator from './Separator';
+import Separator from './common/Separator';
 
 
 export default function Products() {

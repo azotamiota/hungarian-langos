@@ -1,3 +1,4 @@
+export {default as Basket} from './Basket'
 export {default as FoodSection} from './FoodSection'
 export {default as Footer} from './Footer'
 export {default as Hero} from './Hero'

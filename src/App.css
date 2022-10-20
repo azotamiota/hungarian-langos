@@ -516,8 +516,9 @@ a, a:hover, a:focus, a:active, a:visited {
     cursor: pointer;
 }
 .changeAmount {
-    width: 26px;
-    height: 26px;
+    background-color: transparent;
+    /* width: 26px;
+    height: 26px; */
     font-weight: 900;
     font-size: 20px;
 

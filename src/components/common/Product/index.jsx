@@ -17,7 +17,7 @@ function Product({isBiggerThanMobile, name, price, img}) {
   }
   const addToBasket = (e) => {
     e.preventDefault()
-    
+
   }
   return (
     <div className={(isBiggerThanMobile && "food-card-tablet") || "food-card first-group-card"}>
@@ -25,9 +25,9 @@ function Product({isBiggerThanMobile, name, price, img}) {
       <div className="food-card-description">{name}</div>
       <div className="price">{price}</div>
       <div className='toBasket'>
-        <button className='changeAmount' onClick={(e) => addOne(e)}>+</button>
+        <button className='changeAmount' onClick={(e) => addOne(e)}>➕</button>
         <div>{count}</div>
-        <button className='changeAmount' onClick={(e) => takeOne(e)}>-</button>
+        <button className='changeAmount' onClick={(e) => takeOne(e)}>➖</button>
       </div>
       <button className='addToBasket' onClick={(e) => addToBasket(e)}>Add to basket</button>
     </div>

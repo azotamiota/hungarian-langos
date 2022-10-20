@@ -1,6 +1,6 @@
 import React, { useReducer } from "react";
 import { useMediaQuery } from "react-responsive";
-
+import { Basket } from '../'
 
 const initialState = {
   navbarVisibility: 'hide-section',
@@ -49,6 +49,7 @@ export default function Navbar() {
               <li><a onClick={!isBiggerThanTablet ? () => dispatch({type: "SET_MULTIPLE"}) : null} href="#drinks">Drinks</a></li>
               <li><a onClick={!isBiggerThanTablet ? () => dispatch({type: "SET_MULTIPLE"}) : null} href="#location">Location</a></li>
               <li><a onClick={!isBiggerThanTablet ? () => dispatch({type: "SET_MULTIPLE"}) : null} href="#footer-icons">Contact</a></li>
+              <li><a onClick={!isBiggerThanTablet ? () => dispatch({type: "SET_MULTIPLE"}) : null} href="#footer-icons"><Basket /></a></li>
     </ul>
   </div>
   </>

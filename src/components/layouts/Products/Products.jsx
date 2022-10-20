@@ -1,7 +1,6 @@
 import  { React, useEffect, useState } from "react";
 import { useMediaQuery } from "react-responsive";
-import { FoodSection, Product } from "../../common";
-import Separator from '../../common/Separator';
+import { FoodSection } from "../../common";
 import {food} from '../../../db/data'
 
 export default function Products() {

@@ -49,7 +49,7 @@ export default function Navbar() {
               <li><a onClick={!isBiggerThanTablet ? () => dispatch({type: "SET_MULTIPLE"}) : null} href="#drinks">Drinks</a></li>
               <li><a onClick={!isBiggerThanTablet ? () => dispatch({type: "SET_MULTIPLE"}) : null} href="#location">Location</a></li>
               <li><a onClick={!isBiggerThanTablet ? () => dispatch({type: "SET_MULTIPLE"}) : null} href="#footer-icons">Contact</a></li>
-              <li><a onClick={!isBiggerThanTablet ? () => dispatch({type: "SET_MULTIPLE"}) : null} href="#footer-icons"><Basket /></a></li>
+              <li><Basket /></li>
     </ul>
   </div>
   </>

@@ -1,4 +1,6 @@
+export {default as AmountButtons} from './AmountButtons'
 export {default as Basket} from './Basket'
+export {default as BasketCard} from './BasketCard'
 export {default as FoodSection} from './FoodSection'
 export {default as Footer} from './Footer'
 export {default as Hero} from './Hero'

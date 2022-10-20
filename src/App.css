@@ -503,31 +503,6 @@ a, a:hover, a:focus, a:active, a:visited {
     padding: 15px 35px;
 }
 
-.toBasket {
-    padding: 10px;
-    display: flex;
-}  
-
-.changeAmount, .addToBasket {
-    margin: 0 5px;
-    text-align: center;
-    line-height: 26px;
-    border: none;
-    cursor: pointer;
-}
-.changeAmount {
-    background-color: transparent;
-    /* width: 26px;
-    height: 26px; */
-    font-weight: 900;
-    font-size: 20px;
-
-}
-
-.addToBasket {
-    color: green;
-}
-
 .hidden {
     display: none;
 }

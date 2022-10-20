@@ -1,5 +1,7 @@
 import React , { useState } from 'react'
 import styles from './Basket.module.css'
+
+import { BasketCard } from '../'
 function Basket() {
   const data = [
     {name: 'sample food', amount: 3, price: 3.45},
@@ -10,24 +12,15 @@ function Basket() {
   const [basketData, setBasketData] = useState(data)
   return (
     <>
-      <div
-      onMouseEnter={() => setIsShown(true)}
-      
-      >
+      <div className={styles.basketIcon} onClick={() => setIsShown(prev => !prev)}>
       👜</div>
       {isShown && (
         <div className={styles.basket}>
           <div className={styles.closeBasket} onClick={() => setIsShown(false)}>❌</div>
-          Your basket: 
+          <p>Your basket:</p> 
           <div>{basketData ? 
           basketData.map((item, index) => (<div>
-            <span>{index + 1} </span>
-            <span>{item.name} </span>
-            <span>{item.price} </span>
-            <span>x</span>
-            <span>{item.amount} </span>
-            <span>=</span>
-            <span>{item.amount*item.price}</span>
+            <BasketCard item={item} index={index}/>
           </div>))
           : 'Add your order to proceed'}</div>
         </div>

@@ -1,10 +1,9 @@
 const initialStore = {
-  band: '',
-  songs: [],
-  visibleRes: false,
-  favourites: [],
-  error: ''
-  
+  user: {},
+  order: {
+    products: [],
+    total: 0,
+  }
 }
 
 const reducer = (state = initialStore, action) => {
@@ -13,6 +12,12 @@ const reducer = (state = initialStore, action) => {
           ...state,
           order: [...state['order'], action.payload]
       }
+  }
+  if (action.type === "REMOVE_FROM_ORDER") {
+    return {
+        ...state,
+        // logic to remove from order
+    }
   }
   return state
 }

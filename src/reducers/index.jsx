@@ -19,14 +19,13 @@ const calculateTotal = (array) => {
 }
 
 const reducer = (state = initialStore, action) => {
-  if (action.type === "ADD_TO_BASKET") {
+  if (action.type === "AMEND_BASKET") {
+
     const currentProduct = state.order.products.filter(e => e.name === action.payload.name) //change this to ID to increase accuracy
-    console.log('currentProduct: ', currentProduct)
-    console.log('action.payload: ', action.payload)
+
     if (currentProduct.length > 0) {
-      currentProduct[0].price = action.payload.price //TODO why price comes in as undefined the first time?
+      currentProduct[0].price = action.payload.price
       currentProduct[0].amount = action.payload.amount
-      console.log(state)
       return {
         ...state,
         order: {

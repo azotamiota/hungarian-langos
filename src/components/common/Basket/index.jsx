@@ -1,4 +1,4 @@
-import React , { useState, useEffect } from 'react'
+import React from 'react'
 import styles from './Basket.module.css'
 import { useSelector, useDispatch } from 'react-redux';
 import { basketVisibility } from '../../../actions';
@@ -6,7 +6,6 @@ import { BasketCard } from '../'
 function Basket() {
 
   const dispatch = useDispatch()
-  const data = useSelector(state => state.order)
   const orderTotal = useSelector(state => state.order.total)
   const basketData = useSelector(state => state.order)
   const isBasketVisible = useSelector(state => state.isBasketVisible)
@@ -21,7 +20,7 @@ function Basket() {
           <p>Your basket:</p> 
           <div>{basketData.products.length > 0 ? 
           basketData.products.map((item, index) => (<div key={index}>
-            <BasketCard item={item} index={index}/>
+            <BasketCard index={index} name={item.name} price={item.price}/>
           </div>))
           : 'Add your order to proceed'}</div>
           <hr

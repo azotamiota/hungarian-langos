@@ -8,9 +8,10 @@
   top: 80px;
   width: 50vw;
   
-  height: 600px;
+  min-height: 400px;
   background-color: white;
-  outline: 1px solid blue;
+  border-radius: 10px;
+  box-shadow: 4px 4px rgba(56, 237, 6, 0.762);
 }
 
 .closeBasket {
@@ -19,8 +20,12 @@
   position: absolute;
   width: 30px;
   height: 30px;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.summary{
+  margin: 5%;
+  float: right;
 }

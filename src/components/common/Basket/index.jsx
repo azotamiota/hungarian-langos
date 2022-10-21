@@ -1,4 +1,5 @@
 import React , { useState, useEffect } from 'react'
+import { useNavigate } from 'react-router-dom';
 import styles from './Basket.module.css'
 import { useSelector, useDispatch } from 'react-redux';
 import { basketVisibility } from '../../../actions';
@@ -6,11 +7,14 @@ import { BasketCard } from '../'
 function Basket() {
 
   const dispatch = useDispatch()
-  const data = useSelector(state => state.order)
   const orderTotal = useSelector(state => state.order.total)
   const basketData = useSelector(state => state.order)
   const isBasketVisible = useSelector(state => state.isBasketVisible)
-
+  const navigateTo = useNavigate()
+  const toCheckout = (e) => {
+    e.preventDefault()
+    navigateTo('/checkout')
+  }
   return (
     <>
       <div className={styles.basketIcon} onClick={() => dispatch(basketVisibility(!isBasketVisible))}>
@@ -35,7 +39,7 @@ function Basket() {
           />
           <div className={styles.summary}>
             <div>total: <span>{orderTotal}</span></div>
-            <button>Checkout</button> 
+            <button onClick={toCheckout}>Checkout</button> 
           </div>
         </div>
       )}

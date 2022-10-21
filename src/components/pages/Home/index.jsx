@@ -1,6 +1,6 @@
 import React from 'react'
 import {Hero , Location, Separator} from '../../../components/common'
-import Products from "../../layouts/Products/Products";
+import Products from "../../layouts/Products";
 
 
 function index() {

@@ -40,7 +40,7 @@ const reducer = (state = initialStore, action) => {
         ...state,
         order: {
           products: [...state.order.products, action.payload],
-          total: calculateTotal([...state.order.products, action.payload])   
+          total: calculateTotal([...state.order.products, action.payload])
         }
       }
     }

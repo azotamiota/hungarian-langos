@@ -17,10 +17,13 @@ const reducer = (state = initialStore, action) => {
       state.order.products.push(action.payload)
 
     }
-    // now calculate the total total
+    state.order.total = state.order.products.reduce((total, curr) => {
+      return total.price + curr.price
+    })[0] // now calculate the total total
     console.log(state.order.products, action.payload)
     return state
   }
+  
   if (action.type === "REMOVE_FROM_ORDER") {
     return {
         ...state,

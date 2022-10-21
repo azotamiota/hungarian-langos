@@ -24,19 +24,11 @@ const reducer = (state = initialStore, action) => {
     console.log(state.order.products, action.payload)
     return state
   }
-  
-  if (action.type === "REMOVE_FROM_ORDER") {
-    return {
-        ...state,
-        // logic to remove from order
-    }
-  }
 
   if (action.type === "SET_BASKET_VISIBILITY") {
     return {
         ...state,
-        isBasketVisible: !state.isBasketVisible
-        // logic to remove from order
+        isBasketVisible: action.payload
     }
   }
   return state

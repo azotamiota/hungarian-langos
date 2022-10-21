@@ -9,16 +9,15 @@ function Basket() {
   const data = useSelector(state => state.order)
   const orderTotal = useSelector(state => state.order.total)
   const basketData = useSelector(state => state.order)
-  // const data = {products: [{name: 'sample food', price: 4.34, amount: 1}]}
   const isBasketVisible = useSelector(state => state.isBasketVisible)
 
   return (
     <>
-      <div className={styles.basketIcon} onClick={() => dispatch(basketVisibility())}>
+      <div className={styles.basketIcon} onClick={() => dispatch(basketVisibility(!isBasketVisible))}>
       👜</div>
       {isBasketVisible && (
         <div className={styles.basket}>
-          <div className={styles.closeBasket} onClick={() => dispatch(basketVisibility())}>❌</div>
+          <div className={styles.closeBasket} onClick={() => dispatch(basketVisibility(false))}>❌</div>
           <p>Your basket:</p> 
           <div>{basketData.products.length > 0 ? 
           basketData.products.map((item, index) => (<div key={index}>

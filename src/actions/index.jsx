@@ -16,10 +16,11 @@ export function removeFromOrder( item ) {
 
 }
 
-export function basketVisibility() {
+export function basketVisibility(bool) {
 
   return {
       type: "SET_BASKET_VISIBILITY",
+      payload: bool
   }
   
 }

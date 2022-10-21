@@ -1,6 +1,9 @@
-import React, { useReducer } from "react";
+import React, { useReducer } from "react"
+import { useDispatch } from "react-redux"
+
 import { useMediaQuery } from "react-responsive";
 import { Basket } from '../'
+
 
 const initialStateMedia = {
   navbarVisibility: 'hide-section',
@@ -9,7 +12,6 @@ const initialStateMedia = {
 }
 
 export default function Navbar() {
-
   const isBiggerThanTablet = useMediaQuery({
   query: '(min-width: 768px)'
   })

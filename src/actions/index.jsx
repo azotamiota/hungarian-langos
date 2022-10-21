@@ -1,17 +1,17 @@
-export function addOrderToBasket( show ) {
+export function addOrderToBasket( order ) {
 
     return {
         type: "ADD_TO_BASKET",
-        payload: show
+        payload: order
     }
 
 }
 
-export function removeFromOrder( show ) {
+export function removeFromOrder( item ) {
 
   return {
       type: "REMOVE_FROM_ORDER",
-      payload: show
+      payload: item
   }
 
 }

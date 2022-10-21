@@ -8,10 +8,8 @@ const initialStore = {
 
 const reducer = (state = initialStore, action) => {
   if (action.type === "ADD_TO_BASKET") {
-      return {
-          ...state,
-          order: [...state['order'], action.payload]
-      }
+    state.order.products.push(action.payload)
+    return state
   }
   if (action.type === "REMOVE_FROM_ORDER") {
     return {

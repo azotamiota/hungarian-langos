@@ -3,6 +3,7 @@ import AmountButtons from '../AmountButtons';
 import styles from './index.module.css'
 function BasketCard({item, index}) {
   const [total, setTotal] = useState((item.amount*item.price).toFixed(2))
+  const [amount, setAmount ] = useState(item.amount)
   return (
       //TODO total has to be later changed to amount, when redux is connected.
     <>
@@ -14,7 +15,7 @@ function BasketCard({item, index}) {
           <textarea className={styles.input}></textarea>
         </div>
         <div className={styles.amountChange}>
-          <AmountButtons amount={item.amount} setTotal={setTotal} price={item.price}/>
+          <AmountButtons amount={amount} setAmount={setAmount} setTotal={setTotal} price={item.price}/>
         </div>
         <span>{total}</span>
       </div> : ''}

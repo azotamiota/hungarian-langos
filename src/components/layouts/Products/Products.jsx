@@ -1,7 +1,7 @@
 import  { React, useEffect, useState } from "react";
 import { useMediaQuery } from "react-responsive";
 import { FoodSection } from "../../common";
-import {food} from '../../../db/data'
+import axios from "axios";
 
 export default function Products() {
 
@@ -10,8 +10,23 @@ export default function Products() {
   })
   
   const [position, setPosition] = useState(0)
+  const [food, setFood] = useState([])
   // const [widthDiff, setWidthDiff] = useState(0)
   
+  useEffect(() => {
+
+    const getMenu = async () => {
+      try {
+        const fetchedData = await axios.get('https://react-restaurant-sample.herokuapp.com/products')
+        setFood(fetchedData.data)
+      } catch (error) {
+        console.log('Server error: ', error)
+      }
+    }
+    getMenu()
+
+  }, [])
+
    if (position > 0) {
         setPosition(0)
       }
@@ -22,7 +37,7 @@ export default function Products() {
     }
   }, [position]) // only re-run the effect if position changes 
 
-
+  console.log('food in Products: ', food)
   return <>
     {food.map(sec =><FoodSection key={sec.category} name={sec.category} isBiggerThanMobile={isBiggerThanMobile} products={sec.products} />)}
   </>

@@ -9,6 +9,8 @@ function Basket() {
   const data = useSelector(state => state.order)
   const orderTotal = useSelector(state => state.order.total)
   const basketData = useSelector(state => state.order)
+  console.log('orderTotal: ', orderTotal)
+  console.log('orderTotal: ', orderTotal)
   // const data = {products: [{name: 'sample food', price: 4.34, amount: 1}]}
   const isBasketVisible = useSelector(state => state.isBasketVisible)
 

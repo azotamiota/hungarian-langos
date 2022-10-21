@@ -4,6 +4,7 @@ import { useSelector } from 'react-redux';
 import { BasketCard } from '../'
 function Basket() {
   const data = useSelector(state => state.order)
+  // const data = {products: [{name: 'sample food', price: 4.34, amount: 1}]}
   const [isShown, setIsShown] = useState(false)
   const [ orderTotal, setOrderTotal] = useState(0)
   const [basketData, setBasketData] = useState(data) //TODO has to be updated from redux

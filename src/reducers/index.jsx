@@ -8,7 +8,16 @@ const initialStore = {
 
 const reducer = (state = initialStore, action) => {
   if (action.type === "ADD_TO_BASKET") {
-    state.order.products.push(action.payload)
+    const currentProduct = state.order.products.filter(e => e.name === action.payload.name)
+    if (currentProduct.length > 0) {
+      currentProduct[0].price = action.payload.price
+      currentProduct[0].amount = action.payload.amount
+      console.log(action.payload)
+    } else {
+      state.order.products.push(action.payload)
+
+    }
+    console.log(state.order.products, action.payload)
     return state
   }
   if (action.type === "REMOVE_FROM_ORDER") {

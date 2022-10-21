@@ -1,5 +1,4 @@
 import  React, { useState} from "react"
-import { useDispatch, useSelector } from 'react-redux'
 import AmountButtons from "../AmountButtons"
 
 function Product({isBiggerThanMobile, id, name, price, img}) {
@@ -11,7 +10,7 @@ function Product({isBiggerThanMobile, id, name, price, img}) {
       
       <div className="food-card-description"><span>{id}.</span> {name}</div>
       <div className="price">{price}</div>
-      <AmountButtons amount={amount} setAmount={setAmount} foodId={id} name={name}/>      
+      <AmountButtons amount={amount} setAmount={setAmount} foodId={id} name={name} price={price}/>      
     </div>
   )
 }

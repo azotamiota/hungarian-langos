@@ -15,7 +15,7 @@ function BasketCard({item, index}) {
           <textarea className={styles.input}></textarea>
         </div>
         <div className={styles.amountChange}>
-          <AmountButtons amount={amount} setAmount={setAmount} setTotal={setTotal} price={item.price}/>
+          <AmountButtons amount={amount} name={item.name} setAmount={setAmount} setTotal={setTotal} price={item.price}/>
         </div>
         <span>{total}</span>
       </div> : ''}

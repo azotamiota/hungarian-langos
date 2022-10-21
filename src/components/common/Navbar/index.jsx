@@ -2,7 +2,7 @@ import React, { useReducer } from "react";
 import { useMediaQuery } from "react-responsive";
 import { Basket } from '../'
 
-const initialState = {
+const initialStateMedia = {
   navbarVisibility: 'hide-section',
   hamburgerMenuState: '',
   activeColor: 'inherit'
@@ -14,7 +14,7 @@ export default function Navbar() {
   query: '(min-width: 768px)'
   })
 
-  const reducer = (state, action) => {
+  const reducerMedia = (state, action) => {
     switch (action.type) {
       case "SET_MULTIPLE":
         return {
@@ -27,7 +27,7 @@ export default function Navbar() {
     }
   }
 
-  const [state, dispatch] = useReducer(reducer, initialState)
+  const [state, dispatch] = useReducer(reducerMedia, initialStateMedia)
                 
   // <img src="../images/logo.png" alt=""/>
 

@@ -14,7 +14,7 @@ function index({isBiggerThanMobile, products, name}) {
     <div id={(isBiggerThanMobile && "street-food") || 'false'} className='products'>
       <header><span className='red-letters'>{splitInHalf(name)[0]}</span><span className='green-letters'>{splitInHalf(name)[1]}</span></header>
       <div id="moveable-street-food" className={(isBiggerThanMobile && "slidable-cards") ||"cards-class"}> 
-        {products.map((prod, index) => (<Product key={index} isBiggerThanMobile={isBiggerThanMobile} name={prod.name} price={prod.price} img={prod.image}/>))}
+        {products.map((prod, index) => (<Product key={index} isBiggerThanMobile={isBiggerThanMobile} id={ prod.id} name={prod.name} price={prod.price} img={prod.image}/>))}
           
       </div>
       <Separator />

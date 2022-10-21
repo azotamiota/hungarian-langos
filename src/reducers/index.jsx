@@ -3,7 +3,8 @@ const initialStore = {
   order: {
     products: [],
     total: 0,
-  }
+  }, 
+  isBasketVisible: false
 }
 
 const reducer = (state = initialStore, action) => {
@@ -27,6 +28,14 @@ const reducer = (state = initialStore, action) => {
   if (action.type === "REMOVE_FROM_ORDER") {
     return {
         ...state,
+        // logic to remove from order
+    }
+  }
+
+  if (action.type === "SET_BASKET_VISIBILITY") {
+    return {
+        ...state,
+        isBasketVisible: !state.isBasketVisible
         // logic to remove from order
     }
   }

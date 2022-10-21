@@ -15,3 +15,11 @@ export function removeFromOrder( item ) {
   }
 
 }
+
+export function basketVisibility() {
+
+  return {
+      type: "SET_BASKET_VISIBILITY",
+  }
+  
+}

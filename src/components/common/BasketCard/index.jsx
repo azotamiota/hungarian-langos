@@ -2,11 +2,12 @@ import React, {useState} from 'react'
 import { useSelector } from 'react-redux'
 import AmountButtons from '../AmountButtons'
 import styles from './index.module.css'
+
 function BasketCard({item, index}) {
-  const [total, setTotal] = useState((item.amount*item.price).toFixed(2))
   const initamount = useSelector(state => state.order.products.filter(e => e.name === item.name)[0].amount)
+  const [total, setTotal] = useState((item.amount*item.price).toFixed(2))
   const [amount, setAmount ] = useState(item.amount)
-  console.log(initamount)
+  console.log('initamount in BasketCard: ', initamount)
   return (
       //TODO total has to be later changed to amount, when redux is connected.
     <>

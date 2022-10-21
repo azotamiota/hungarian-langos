@@ -18,7 +18,7 @@ function Basket() {
           <div className={styles.closeBasket} onClick={() => setIsShown(false)}>❌</div>
           <p>Your basket:</p> 
           <div>{basketData.products.length > 0 ? 
-          basketData.products.map((item, index) => (<div>
+          basketData.products.map((item, index) => (<div key={index}>
             <BasketCard item={item} index={index}/>
           </div>))
           : 'Add your order to proceed'}</div>

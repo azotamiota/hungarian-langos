@@ -5,10 +5,13 @@ import { useNavigate } from 'react-router-dom'
 import styles from './Basket.module.css'
 import { basketVisibility } from '../../../actions'
 import { BasketContent } from '..'
+
+import cart from '../../../images/cart.png'
 function BasketNavIcon() {
 
   const dispatch = useDispatch()
   const isBasketVisible = useSelector(state => state.isBasketVisible)
+  const amountInBasket = useSelector(state => state.order.products.length)
   const navigateTo = useNavigate()
 
   const toCheckout = (e) => {
@@ -19,7 +22,10 @@ function BasketNavIcon() {
   return (
     <>
       <div className={styles.basketIcon} onClick={() => dispatch(basketVisibility(!isBasketVisible))}>
-      👜</div>
+        <div className={styles.notification}><img src={cart} alt='cart'/>
+        {amountInBasket > 0 && <span className={styles.badge}>{amountInBasket}</span>}
+        </div>
+      </div>
       {isBasketVisible && (
         <div className={styles.basket}>
           <div className={styles.closeBasket} onClick={() => dispatch(basketVisibility(false))}>❌</div>

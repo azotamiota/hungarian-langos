@@ -12,8 +12,8 @@ function AmountButtons({price, name, amount}) {
     e.preventDefault()
     if (e.target.name === 'add') {
       dispatch(updateBasket({name: name, price: price, amount: amount === 10 ? 10 : amount + 1}))
-    } else {
-      dispatch(updateBasket({name: name, price: price, amount: amount === 0 ? 0 : amount - 1}))
+    } else if (amount > 0){
+      dispatch(updateBasket({name: name, price: price, amount: amount - 1}))
     }
   }
 

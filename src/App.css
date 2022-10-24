@@ -103,7 +103,7 @@ header {
 #nav-links-tablet {
     display: flex;
     position: fixed;
-    justify-content: space-between;
+    justify-content: space-around;
     top: 0;
     left: 30%;
     width: 70%;

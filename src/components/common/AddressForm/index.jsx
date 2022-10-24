@@ -69,7 +69,7 @@ function AddressForm() {
         </select>
       </div>}
 
-      <Button handleSubmit={handleSubmit}>Submit</Button>
+      <Button handleSubmit={handleSubmit}>Address lookup</Button>
 
       <div className={styles.checkoutInfo}>
       <h2>Delivery Address</h2>

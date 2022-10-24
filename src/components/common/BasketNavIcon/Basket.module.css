@@ -11,13 +11,15 @@
   min-height: 400px;
   background-color: white;
   border-radius: 10px;
-  box-shadow: 4px 4px rgba(56, 237, 6, 0.762);
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.8);
 }
 
 .closeBasket {
   cursor: pointer;
-  background-color: gray;
+  /* background-color: gray; */
+  padding: 5px;
   position: absolute;
+  right: 0;
   width: 30px;
   height: 30px;
   display: flex;

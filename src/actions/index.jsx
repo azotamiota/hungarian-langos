@@ -1,7 +1,7 @@
-export function addOrderToBasket( order ) {
+export function updateBasket( order ) {
 
     return {
-        type: "ADD_TO_BASKET",
+        type: "AMEND_BASKET",
         payload: order
     }
 

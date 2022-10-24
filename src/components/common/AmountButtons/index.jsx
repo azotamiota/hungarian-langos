@@ -1,34 +1,21 @@
-import React, {useState, useEffect} from 'react'
+import React from 'react'
 import styles from './index.module.css'
-import { useDispatch, useSelector } from 'react-redux'
-import { addOrderToBasket } from "../../../actions"
+import { useDispatch } from 'react-redux'
+import { updateBasket } from "../../../actions"
 
 
-function AmountButtons({amount, setAmount, setTotal, price, name, foodId}) {
+function AmountButtons({price, name, amount}) {
+
   const dispatch = useDispatch()
-
-
+ 
   const changeAmount = (e) => {
     e.preventDefault()
-    if (amount < 10){
-      setAmount(prev => {
-        let now = prev
-        if(e.target.name == 'add') {
-          now = now + 1
-        } else {
-          now = now - 1
-        }
-        dispatch(addOrderToBasket({name: name, price: price, amount: now}))
-        if (setTotal) {
-          setTotal((now*price).toFixed(2))
-        }
-        return now
-      })
+    if (e.target.name === 'add') {
+      dispatch(updateBasket({name: name, price: price, amount: amount === 10 ? 10 : amount + 1}))
     } else {
-      alert('sorry, 10 is maximum number for one order')
+      dispatch(updateBasket({name: name, price: price, amount: amount === 0 ? 0 : amount - 1}))
     }
   }
-
 
   return (
     <div className={styles.toBasket}>

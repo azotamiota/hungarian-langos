@@ -1,29 +1,29 @@
-import React, {useState} from 'react'
+import React from 'react'
 import { useSelector } from 'react-redux'
 import AmountButtons from '../AmountButtons'
 import styles from './index.module.css'
 
-function BasketCard({item, index}) {
-  const initamount = useSelector(state => state.order.products.filter(e => e.name === item.name)[0].amount)
-  const [total, setTotal] = useState((item.amount*item.price).toFixed(2))
-  const [amount, setAmount ] = useState(item.amount)
-  console.log('initamount in BasketCard: ', initamount)
+function BasketCard({index, name, price}) {
+
+  const actualAmount = useSelector(state => state.order.products.filter(prod => prod.name === name))
+
   return (
-      //TODO total has to be later changed to amount, when redux is connected.
-    <>
-      {total > 0 ? <div className={styles.root}> 
+
+    <>{actualAmount[0]['amount'] > 0 &&
+      <div className={styles.root}> 
         <div className={styles.number}>{index + 1} </div>
         <div className={styles.description}>
-          <span className={styles.title}>{item.name} </span>
+          <span className={styles.title}>{name} </span>
           <label className={styles.inputLabel} htmlFor={'notes-' + index}>Additonal Information</label>
           <textarea className={styles.input}></textarea>
         </div>
         <div className={styles.amountChange}>
-          <AmountButtons amount={amount} name={item.name} setAmount={setAmount} setTotal={setTotal} price={item.price}/>
+          <AmountButtons name={name} price={price} amount={actualAmount.length > 0 ? actualAmount[0]['amount'] : 0}/> 
         </div>
-        <span>{total}</span>
-      </div> : ''}
+        <span>{actualAmount.length > 0 && (actualAmount[0]['amount'] * price).toFixed(2)}</span>
+      </div>}
     </>
+
   )
 }
 

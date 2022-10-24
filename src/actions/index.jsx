@@ -1,6 +1,6 @@
 export function updateBasket( order ) {
 
-    return {
+  return {
         type: "AMEND_BASKET",
         payload: order
     }

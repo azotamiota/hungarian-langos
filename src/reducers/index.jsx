@@ -26,11 +26,21 @@ const reducer = (state = initialStore, action) => {
     if (currentProduct.length > 0) {
       currentProduct[0].price = action.payload.price
       currentProduct[0].amount = action.payload.amount
-      return {
-        ...state,
-        order: {
-          products: [...state.order.products],
-          total: calculateTotal([...state.order.products])   
+      if (action.payload.amount === 0) {
+        return {
+          ...state,
+          order: {
+            products: [...state.order.products].filter(product => product.amount !== 0),
+            total: calculateTotal([...state.order.products])
+          }
+        }
+      } else {
+        return {
+          ...state,
+          order: {
+            products: [...state.order.products],
+            total: calculateTotal([...state.order.products])   
+          }
         }
       }
 

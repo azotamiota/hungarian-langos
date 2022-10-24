@@ -1,16 +1,23 @@
 .root {
   width: 90%;
-  outline: 1px solid pink;
+  /* outline: 1px solid pink; */
   height: 100px;
   margin: 20px auto;
+  box-shadow: 1px 1px 12px rgba(83, 83, 83, 0.5);
 
   display: flex;
+  /* grid-template-columns: auto auto auto auto auto ; */
   justify-content: space-around;
   align-items: center;
+  border-radius: 10px;
 }
 
 .number{
-  font-size: 60px;
+  font-size: 30px;
+}
+
+.foodImage {
+  height: 100%;
 }
 
 .description {

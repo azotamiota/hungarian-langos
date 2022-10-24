@@ -2,7 +2,7 @@ import React from "react";
 import { Routes, Route } from "react-router-dom"
 
 import './App.css'
-import { MainLayout } from "./components/layouts"
+import {MainLayout} from './components/layouts'
 import { Home, Checkout } from './components/pages'
 
 

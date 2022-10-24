@@ -1,8 +1,11 @@
 import React from 'react'
+import styles from './index.module.css'
 
-function Button() {
+function Button({handleSubmit}) {
   return (
-    <div>Button</div>
+    <label htmlFor="">
+      <input type='submit'  className={styles.submit}  onClick={handleSubmit} />
+    </label>
   )
 }
 

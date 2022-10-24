@@ -51,15 +51,6 @@ label {
   min-width: 360px;
 }
 
-.submit {
-  width: 50%;
-  margin: 0 25%;
-  background-color: black;
-  padding: 0.9em 0 0.9em 0;
-  color: white;
-  font-weight: 900;
-}
-
 .select {
   font-size: 1em;
   position: relative;

@@ -1,0 +1,9 @@
+
+.submit{ 
+  width: 50%;
+  margin: 0 25%;
+  background-color: black;
+  padding: .9em 0 .9em 0;
+  color: white;
+  font-weight: 900;
+}

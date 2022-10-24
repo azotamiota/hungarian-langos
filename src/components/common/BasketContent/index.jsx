@@ -30,7 +30,7 @@ function BasketContent() {
         }}
       />
       <div className={styles.summary}>
-        <div>total: <span>{orderTotal}</span></div>
+        <div>total: <span>£{orderTotal}</span></div>
       </div>
     </div>
   )

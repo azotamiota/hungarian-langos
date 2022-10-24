@@ -1,5 +1,5 @@
 import React from 'react'
-import { useSelector, useDispatch } from 'react-redux'
+import { useDispatch } from 'react-redux'
 import { Outlet } from 'react-router-dom'
 
 import { Footer, Navbar} from '../../common'
@@ -7,7 +7,7 @@ import {basketVisibility} from '../../../actions'
 
 function MainLayout() {
   const dispatch = useDispatch()
-  const isBasketVisible = useSelector(store => store.isBasketVisible)
+
   return (
     <>
       <Navbar />

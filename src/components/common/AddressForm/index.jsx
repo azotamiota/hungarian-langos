@@ -1,11 +1,10 @@
 import React, {useState, useEffect} from 'react'
-import Button from '../Button';
+import {Button, FormInput} from '../';
 import styles from './index.module.css'
 import { fetchPostcodeApis, findDistance, calculateDeliveryCost } from '../../../utils'
 
 function AddressForm() {
 
-  const [name, setName] = useState()
   const [restaurantCoord, setRestaurantCoord] = useState({longitude: -2.117319, latitude:51.472078}) //TODO this should come from the store too
   const [clientCoord, setClientCoord] = useState({longitude: 0, latitude: 0})
   const [postcode, setPostcode] = useState('')
@@ -59,7 +58,6 @@ function AddressForm() {
       <label htmlFor="postcode">
         <input text='' id='postcode'  className={styles.textInput}  onChange={(e)=> setPostcode(e.target.value)} value={postcode}></input>
       </label>
-
       {addressArray.length > 0 && 
       <div className={styles.select}>
         <span className={styles.arrow}></span>
@@ -68,33 +66,18 @@ function AddressForm() {
           {addressArray.map((el, i) => <option key={i} value={el.suggestion} >{el.suggestion}</option>)}
         </select>
       </div>}
-
       <Button handleSubmit={handleSubmit}>Address lookup</Button>
-
       <div className={styles.checkoutInfo}>
       <h2>Delivery Address</h2>
-      <label >Your name</label>
-      <input type="text" className={styles.textInput} value={name} onChange={(e)=>setName(e.target.value)} placeholder='full name'></input>
-      
-      <label >First line of address</label>
-      <input type="text" className={styles.textInput} value={clientAddress.firstLine} onChange={(e)=>setClientAddress({...clientAddress, firstLine:  e.target.value})} placeholder='first line'></input>
-      <label >Second line (optional)</label>
-      <input type="text" className={styles.textInput}  value={clientAddress.secondLine} onChange={(e)=>setClientAddress({...clientAddress, secondLine:  e.target.value})} placeholder='second line' />
-      <label >Third line (optional)</label>
-      <input type="text" className={styles.textInput}  value={clientAddress.thirdLine} onChange={(e)=>setClientAddress({...clientAddress, thirdLine:  e.target.value})} placeholder='third line' />
+      <FormInput type='text' labelText='Your name' placeholder='full name' />
+      <FormInput type='text' labelText='First line of address' placeholder='first line' />
+      <FormInput type='text' labelText='Second line of address (optional)' placeholder='second line' />
+      <FormInput type='text' labelText='Third line of address (optional)' placeholder='third line' />
       <div className={styles.row}>
-        <div>
-          <label>Postcode</label>
-          <input type="text" className={styles.textInput}  value={clientAddress.postcode} onChange={(e)=>setClientAddress({...clientAddress, postcode:  e.target.value})} placeholder='postcode'></input>
-        </div>
-        <div>
-          <label >City/Town</label>
-          <input type="text" className={styles.textInput} value={clientAddress.town} onChange={(e)=>setClientAddress({...clientAddress, town:  e.target.value})} placeholder='postcode'></input>
-        </div>
+          <FormInput type='text' labelText='Postcode' placeholder='postcode' />
+          <FormInput type='text' labelText='City/Town' placeholder='town' />
       </div>
-      
-      <label >Email</label>
-      <input type="text" className={styles.textInput} placeholder='example@gmail.com'></input>
+      <FormInput type='text' labelText='Email' placeholder='example@gmail.com' />
       </div>
     </form>
   )

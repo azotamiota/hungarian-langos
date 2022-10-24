@@ -1,0 +1,8 @@
+
+.textInput {
+  display: block;
+  margin: .3em auto 1.5em auto;
+  width: 100%;
+  border: solid 2px #ccc;
+  padding: .925em 0 .925em 1em;
+}

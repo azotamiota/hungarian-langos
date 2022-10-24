@@ -4,9 +4,9 @@ import { useNavigate } from 'react-router-dom'
 
 import styles from './Basket.module.css'
 import { basketVisibility } from '../../../actions'
-import { BasketContent } from '..'
-
+import { BasketContent, Button } from '..'
 import cart from '../../../images/cart.png'
+
 function BasketNavIcon() {
 
   const dispatch = useDispatch()
@@ -30,7 +30,7 @@ function BasketNavIcon() {
         <div className={styles.basket}>
           <div className={styles.closeBasket} onClick={() => dispatch(basketVisibility(false))}>❌</div>
           <BasketContent />
-          <button onClick={toCheckout}>Checkout</button> 
+          <Button onClick={toCheckout}>Checkout</Button> 
         </div>
       )}
     </>

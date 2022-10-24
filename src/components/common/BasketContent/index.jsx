@@ -16,7 +16,7 @@ function BasketContent() {
       <p className={styles.title}>Your basket:</p> 
       <div>{basketData.products.length > 0 ? 
       basketData.products.map((item, index) => (<div key={index}>
-        <BasketCard item={item} index={index}/>
+        <BasketCard index={index} name={item.name} price={item.price}/>
       </div>))
       : 'Add your order to proceed'}</div>
       <hr

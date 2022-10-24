@@ -1,5 +1,4 @@
 import React, {useState, useEffect} from 'react'
-import axios from 'axios'
 
 import styles from './index.module.css'
 import { AddressForm, BasketContent, Container } from '../../common'
@@ -16,6 +15,10 @@ function Checkout() {
   const [distance, setDistance] = useState(0)
   const [clientAddress, setClientAddress] = useState('')
   
+  const handleSubmit = (e) =>  {
+    e.preventDefault()
+    fetchPostcodeApis(e, postcode, setAddressArray, setClientCoord)
+  }
 
   useEffect(() => {
     findDistance(restaurantCoord, clientCoord, setDistance)
@@ -41,21 +44,7 @@ function Checkout() {
   return (
     <Container>
       <BasketContent />
-      <div className={styles.delivery}>
-        <h1>Delivery</h1>
-        {doDeliver ? <div>Delivery cost: {deliveryCost}</div> : <div>Sorry, we don't deliver to your address</div> }
-        <label htmlFor="postcode">Enter delivery postcode</label>
-        <input text='' id='postcode' onChange={(e)=> setPostcode(e.target.value)} value={postcode}></input>
-        <button onClick={(e) =>   fetchPostcodeApis(e, postcode, setAddressArray, setClientCoord)}>Submit</button>
-      </div>
-      {addressArray.length > 0 && 
-      <div>
-        <select className={styles.delivery} onChange={(e) => setClientAddress(e.target.value)}>
-          <option>choose your address</option>
-          {addressArray.map((el, i) => <option key={i} value={el.suggestion} >{el.suggestion}</option>)}
-        </select>
-      </div>}
-      <AddressForm addressString={clientAddress}/>
+      <AddressForm addressString={clientAddress} postcode={postcode} setPostcode={setPostcode} doDeliver={doDeliver} deliveryCost={deliveryCost} handleSubmit={handleSubmit} addressArray={addressArray} setClientAddress={setClientAddress}/>
     </Container>
   )
 }

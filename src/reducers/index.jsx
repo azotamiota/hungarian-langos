@@ -12,7 +12,7 @@ const calculateTotal = (array) => {
   for (let item of array) {
     console.log(item.price * item.amount)
     total += parseFloat(item.price)*parseFloat(item.amount)
-    console.log(total.toFixed(2))
+
   }
   return total.toFixed(2)
 
@@ -39,7 +39,7 @@ const reducer = (state = initialStore, action) => {
         ...state,
         order: {
           products: [...state.order.products, action.payload],
-          total: calculateTotal([...state.order.products, action.payload])   
+          total: calculateTotal([...state.order.products, action.payload])
         }
       }
     }

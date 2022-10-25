@@ -19,6 +19,10 @@ function AddressForm() {
     fetchPostcodeApis(e, postcode, setAddressArray, setClientCoord)
   }
 
+  const handleFormSubmit = (e) => {
+    e.preventDefault()
+    console.log(e.target.form.firstLine.value)
+  }
   const handleSelectOnChange = (e) => {
     const array = e.target.value.split(',')
     const obj = {
@@ -32,12 +36,10 @@ function AddressForm() {
   }
 
   useEffect(() => {
-    findDistance(restaurantCoord, clientCoord, setDistance)
+    const cost = findDistance(restaurantCoord, clientCoord, setDistance)
+    setDeliveryCost(cost)
   }, [clientCoord])
-
-  useEffect(() => {
-    calculateDeliveryCost(distance, setDeliveryCost)
-  }, [distance])
+  
 
   useEffect(() => {
     console.log(deliveryCost)
@@ -49,12 +51,13 @@ function AddressForm() {
   }, [deliveryCost])
 
   useEffect(() => {
-    console.log('here' + clientAddress)
+    console.log('here', clientAddress)
   }, [clientAddress])
   return (
-    <form className={styles.contentWrapper}>
+    <form className={styles.contentWrapper} id="myform">
       <h1>Checkout</h1>
       {doDeliver ? <div>Delivery cost: £{deliveryCost}.00</div> : <div>Sorry, we don't deliver to your address</div> }
+      {/* here is the problem */} 
       <label htmlFor="postcode">
         <input text='' id='postcode'  className={styles.textInput}  onChange={(e)=> setPostcode(e.target.value)} value={postcode}></input>
       </label>
@@ -70,15 +73,16 @@ function AddressForm() {
       <div className={styles.checkoutInfo}>
       <h2>Delivery Address</h2>
       <FormInput type='text' labelText='Your name' placeholder='full name' />
-      <FormInput type='text' labelText='First line of address' placeholder='first line' />
-      <FormInput type='text' labelText='Second line of address (optional)' placeholder='second line' />
+      <FormInput type='text' labelText='First line of address' placeholder='first line' defaultValue={clientAddress.firstLine} name='firstLine'/>
+      <FormInput type='text' labelText='Second line of address (optional)' placeholder='second line' name='secondLine'/>
       <FormInput type='text' labelText='Third line of address (optional)' placeholder='third line' />
       <div className={styles.row}>
-          <FormInput type='text' labelText='Postcode' placeholder='postcode' />
-          <FormInput type='text' labelText='City/Town' placeholder='town' />
+          <FormInput type='text' labelText='Postcode' placeholder='postcode' name='postcode' />
+          <FormInput type='text' labelText='City/Town' placeholder='town' name='town'/>
       </div>
       <FormInput type='text' labelText='Email' placeholder='example@gmail.com' />
       </div>
+      <Button handleSubmit={handleFormSubmit} form="myform"/>
     </form>
   )
 }

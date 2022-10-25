@@ -1,5 +1,6 @@
 
 .submit{ 
+  cursor: pointer;
   width: 50%;
   margin: 0 25%;
   background-color: black;

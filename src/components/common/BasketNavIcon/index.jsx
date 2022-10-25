@@ -16,7 +16,6 @@ function BasketNavIcon() {
 
   const toCheckout = (e) => {
     e.preventDefault()
-    console.log('elo')
     navigateTo('/checkout')
     dispatch(basketVisibility(false))
   }

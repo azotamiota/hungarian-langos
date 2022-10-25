@@ -37,16 +37,17 @@ export  const findDistance = async (restaurantCoord, clientCoord, setDistance) =
   if (clientCoord.latitude != 0) {
     const request = await axios.request(options) 
     setDistance(request.data.distance)
+    return calculateDeliveryCost(request.data.distance)
   }
 }
 
-export const calculateDeliveryCost = (distance, setDeliveryCost) => {
+export const calculateDeliveryCost = (distance) => {
   //TODO the price and distance should be settable from the admin page by the restaurant
   if (distance < 2) {
-    setDeliveryCost(0) 
+    return 0 
   } else if ( distance < 6) {
-    setDeliveryCost(3)
+    return 3
   } else {
-    setDeliveryCost(-1)
+    return -1
   }
 }

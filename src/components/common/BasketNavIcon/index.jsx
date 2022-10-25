@@ -30,7 +30,7 @@ function BasketNavIcon() {
         <div className={styles.basket}>
           <div className={styles.closeBasket} onClick={() => dispatch(basketVisibility(false))}>❌</div>
           <BasketContent />
-          <Button onClick={toCheckout}>Checkout</Button> 
+          <Button handleSubmit={toCheckout}>Checkout</Button> 
         </div>
       )}
     </>

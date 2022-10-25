@@ -1,7 +1,11 @@
 import React, {useState, useEffect} from 'react'
-import Button from '../Button';
+
+import {Button, CardPayment} from '../';
 import styles from './index.module.css'
 import { fetchPostcodeApis, findDistance, calculateDeliveryCost } from '../../../utils'
+
+
+
 
 function AddressForm() {
 
@@ -53,7 +57,8 @@ function AddressForm() {
     console.log('here' + clientAddress)
   }, [clientAddress])
   return (
-    <form className={styles.contentWrapper}>
+    <>
+        <form className={styles.contentWrapper}>
       <h1>Checkout</h1>
       {doDeliver ? <div>Delivery cost: £{deliveryCost}.00</div> : <div>Sorry, we don't deliver to your address</div> }
       <label htmlFor="postcode">
@@ -97,6 +102,8 @@ function AddressForm() {
       <input type="text" className={styles.textInput} placeholder='example@gmail.com'></input>
       </div>
     </form>
+    <CardPayment />
+    </>
   )
 }
 

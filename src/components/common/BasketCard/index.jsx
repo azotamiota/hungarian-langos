@@ -1,9 +1,12 @@
 import React from 'react'
 import { useSelector, useDispatch } from 'react-redux'
+
 import AmountButtons from '../AmountButtons'
+import { updateBasket } from "../../../actions"
+
 import styles from './index.module.css'
 
-function BasketCard({index, name, price}) {
+function BasketCard({name, price}) {
 
   const dispatch = useDispatch()
   const actualProduct = useSelector(state => state.order.products.filter(prod => prod.name === name))
@@ -22,7 +25,8 @@ function BasketCard({index, name, price}) {
           <AmountButtons name={name} price={price} amount={actualProduct.length > 0 ? actualProduct[0]['amount'] : 0}/> 
         </div>
         <div>{actualProduct.length > 0 && '£' + (actualProduct[0]['amount'] * price).toFixed(2)}</div>
-        <div className={styles.closeBasket} onClick={() => console.log('actualProduct: ', actualProduct)}>❌</div>
+        <div className={styles.closeBasket} onClick={() => dispatch(updateBasket({name: name, price: price, amount: 0}))
+}>❌</div>
 
       </div>}
     </>

@@ -13,11 +13,14 @@ export default function Products() {
   const [food, setFood] = useState([])
   // const [widthDiff, setWidthDiff] = useState(0)
   
+  // const backendServerProducts = 'https://react-restaurant-sample.herokuapp.com/products'
+  const backendServerProducts = 'http://localhost:4040/products'
+
   useEffect(() => {
 
     const getMenu = async () => {
       try {
-        const fetchedData = await axios.get('https://react-restaurant-sample.herokuapp.com/products')
+        const fetchedData = await axios.get(backendServerProducts)
         setFood(fetchedData.data)
       } catch (error) {
         console.log('Server error: ', error)

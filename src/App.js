@@ -6,8 +6,6 @@ import { MainLayout } from "./components/layouts"
 import { Home, Checkout } from './components/pages'
 
 
-
-
 export default function App() {
 
   return (

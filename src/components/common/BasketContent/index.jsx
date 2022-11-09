@@ -21,9 +21,9 @@ function BasketContent() {
       : 'Add your order to proceed'}</div>
       <hr
         style={{
-          background: 'lime',
-          color: 'lime',
-          borderColor: 'lime',
+          background: '#b46f06',
+          color: '#b46f06',
+          borderColor: '#b46f06',
           height: '3px',
           width: '90%',
           margin: '0 5%',

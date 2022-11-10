@@ -26,7 +26,7 @@ function BasketCard({name, price}) {
         </div>
         <div>{actualProduct.length > 0 && '£' + (actualProduct[0]['amount'] * price).toFixed(2)}</div>
         <div className={styles.closeBasket} onClick={() => dispatch(updateBasket({name: name, price: price, amount: 0}))
-}>❌</div>
+          }>Delete</div>
 
       </div>}
     </>

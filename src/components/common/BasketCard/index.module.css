@@ -7,7 +7,7 @@
 
   display: flex;
   /* grid-template-columns: auto auto auto auto auto ; */
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   border-radius: 10px;
 }
@@ -45,11 +45,13 @@
 
 .closeBasket {
   cursor: pointer;
-  padding: 5px;
+  padding-inline: 10px;
   /* right: 0; */
-  width: 15px;
-  height: 15px;
+  /* width: 15px; */
+  /* height: 15px; */
   display: flex;
   justify-content: center;
   align-items: center;
+  font-size: 10px;
+  color: red;
 }

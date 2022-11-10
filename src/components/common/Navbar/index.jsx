@@ -1,5 +1,4 @@
 import React, { useReducer } from "react"
-
 import { useMediaQuery } from "react-responsive";
 import { Basket } from '../'
 
@@ -29,11 +28,13 @@ export default function Navbar() {
 
   const [state, dispatch] = useReducer(reducerMedia, initialStateMedia)
                 
-  // <img src="../images/logo.png" alt=""/>
+  const handleClick = (e) => {
+    !isBiggerThanTablet && dispatch({type: "SET_MULTIPLE"});
+  }
 
   return <>
   <div id="navbar-container">
-    <div id={(!isBiggerThanTablet && "navbar") || 'navbar-tablet' }>
+    <div id={!isBiggerThanTablet ? 'navbar' : 'navbar-tablet' }>
         <header className='brand-header'><span className='red-letters'>Sample</span><span className='green-letters'> Name</span></header>       
     </div>
     {!isBiggerThanTablet && <div id="container" className={state.hamburgerMenuState} onClick={() => dispatch({type: "SET_MULTIPLE"})}>
@@ -42,13 +43,13 @@ export default function Navbar() {
               <div className="bar3"></div>
           </div>}
     <ul id={(!isBiggerThanTablet && "nav-links") || "nav-links-tablet"} className={!isBiggerThanTablet ? state.navbarVisibility : 'false'}>
-              <li><a onClick={!isBiggerThanTablet ? () => dispatch({type: "SET_MULTIPLE"}) : null} href='#hero'>Home</a></li>
+              <li><a onClick={(e) => handleClick(e)} href='http://localhost:3000/#hero'>Home</a></li>
               {/* <li><a onClick={!isBiggerThanTablet ? () => dispatch({type: "SET_MULTIPLE"}) : null} href="#food-groups">Menu</a></li> */}
-              <li><a onClick={!isBiggerThanTablet ? () => dispatch({type: "SET_MULTIPLE"}) : null} href="#street-food">Street Food</a></li>
-              <li><a onClick={!isBiggerThanTablet ? () => dispatch({type: "SET_MULTIPLE"}) : null} href="#bowls">Bowls</a></li>
-              <li><a onClick={!isBiggerThanTablet ? () => dispatch({type: "SET_MULTIPLE"}) : null} href="#drinks">Drinks</a></li>
-              <li><a onClick={!isBiggerThanTablet ? () => dispatch({type: "SET_MULTIPLE"}) : null} href="#location">Location</a></li>
-              <li><a onClick={!isBiggerThanTablet ? () => dispatch({type: "SET_MULTIPLE"}) : null} href="#footer-icons">Contact</a></li>
+              <li><a onClick={(e) => handleClick(e)} href='http://localhost:3000/#starters&appetisers'>Starters</a></li>
+              <li><a onClick={(e) => handleClick(e)} href="http://localhost:3000/#mains">Mains</a></li>
+              <li><a onClick={(e) => handleClick(e)} href="http://localhost:3000/#drinks">Drinks</a></li>
+              <li><a onClick={(e) => handleClick(e)} href="http://localhost:3000/#location">Location</a></li>
+              <li><a onClick={(e) => handleClick(e)} href="http://localhost:3000/#footer-icons">Contact</a></li>
               <li><Basket /></li>
     </ul>
   </div>

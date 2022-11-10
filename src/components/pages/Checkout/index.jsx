@@ -32,7 +32,7 @@ function Checkout() {
   }, [distance])
 
   useEffect(() => {
-    console.log(deliveryCost)
+    console.log('deliveryCost: ',deliveryCost)
     if (deliveryCost === -1) {
       setDoDeliver(false)
     } else {

@@ -35,7 +35,7 @@ function AddressForm({addressString, doDeliver, postcode, deliveryCost, handleSu
       <div className={styles.select}>
         <span className={styles.arrow}></span>
         <select onChange={(e) => setClientAddress(e.target.value)}>
-          <option>choose your address</option>
+          <option>Choose your address</option>
           {addressArray.map((el, i) => <option key={i} value={el.suggestion} >{el.suggestion}</option>)}
         </select>
       </div>}

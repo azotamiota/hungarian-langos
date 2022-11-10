@@ -13,12 +13,11 @@ function BasketContent() {
 
   return (
     <div>
-      <p className={styles.title}>Your basket:</p> 
-      <div>{basketData.products.length > 0 ? 
+      <p className={styles.title}>Your order:</p> 
+      <div>{basketData.products.length > 0 && 
       basketData.products.map((item, index) => (<div key={index}>
         <BasketCard index={index} name={item.name} price={item.price}/>
-      </div>))
-      : 'Add your order to proceed'}</div>
+      </div>))}</div>
       <hr
         style={{
           background: '#b46f06',

@@ -20,9 +20,9 @@ function AmountButtons({price, name, amount}) {
 
   return (
     <div className={styles.toBasket}>
-      <button className={styles.changeAmount}><img name='add' onClick={(e) => changeAmount(e)} src={plus} alt='plus'/></button>
-      <div>{amount}</div>
       <button className={styles.changeAmount}><img name='minus' onClick={(e) => changeAmount(e)} src={minus} alt='minus'/></button>
+      <div>{amount}</div>
+      <button className={styles.changeAmount}><img name='add' onClick={(e) => changeAmount(e)} src={plus} alt='plus'/></button>
     </div>
   )
 }

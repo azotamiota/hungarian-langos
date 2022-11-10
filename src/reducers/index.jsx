@@ -4,7 +4,8 @@ const initialStore = {
     products: [],
     total: 0,
   }, 
-  isBasketVisible: false
+  isBasketVisible: false,
+  restaurantCoord: {longitude: -2.117319, latitude:51.472078}
 }
 
 const calculateTotal = (array) => {

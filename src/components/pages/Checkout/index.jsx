@@ -1,12 +1,15 @@
 import React, {useState, useEffect} from 'react'
+import { useSelector } from 'react-redux'
 
-import styles from './index.module.css'
+// import styles from './index.module.css'
 import { AddressForm, BasketContent, Container } from '../../common'
 import { fetchPostcodeApis, findDistance, calculateDeliveryCost } from '../../../utils'
 
 
 function Checkout() {
-  const [restaurantCoord, setRestaurantCoord] = useState({longitude: -2.117319, latitude:51.472078}) //TODO this should come from the store too
+
+  const restaurantCoord = useSelector(state => state.restaurantCoord)
+
   const [clientCoord, setClientCoord] = useState({longitude: 0, latitude: 0})
   const [postcode, setPostcode] = useState('')
   const [addressArray, setAddressArray] = useState([]) 
@@ -30,7 +33,7 @@ function Checkout() {
 
   useEffect(() => {
     console.log(deliveryCost)
-    if (deliveryCost == -1) {
+    if (deliveryCost === -1) {
       setDoDeliver(false)
     } else {
       setDoDeliver(true)

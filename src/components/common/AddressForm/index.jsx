@@ -27,6 +27,7 @@ function AddressForm({addressString, doDeliver, postcode, deliveryCost, handleSu
   return (
     <form className={styles.contentWrapper}>
       <h1>Delivery Address</h1>
+      {!doDeliver && <div>Sorry, we don't deliver to your address</div> }
       {/* {doDeliver ? <div>Delivery cost: £{deliveryCost}.00</div> : <div>Sorry, we don't deliver to your address</div> } */}
       <label htmlFor="postcode">Enter your postcode</label>
         <input text='' id='postcode'  className={styles.textInput}  onChange={(e)=> setPostcode(e.target.value)} value={postcode}></input>

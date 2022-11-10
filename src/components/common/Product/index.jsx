@@ -12,7 +12,7 @@ function Product({isBiggerThanMobile, id, name, price, img}) {
       <img src={img} alt={name} className={(isBiggerThanMobile && "food-photo-tablet") ||"food-photo"}></img>
       
       <div className="food-card-description"><span>{id}.</span> {name}</div>
-      <div className="price">{price}</div>
+      <div className="price">£{price}</div>
       <AmountButtons name={name} price={price} amount={actualAmount.length > 0 ? actualAmount[0]['amount'] : 0}/>      
     </div>
   )

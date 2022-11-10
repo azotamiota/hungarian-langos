@@ -40,11 +40,12 @@ function AddressForm({addressString, doDeliver, postcode, deliveryCost, handleSu
         </select>
       </div>}
 
-      <label htmlFor="">
+      {/* <label htmlFor=""> */}
+      <div className={styles.addressButtons}>
           <input type='submit'  className={styles.submit}  onClick={handleSubmit} value='Find your address'/>
           <input type='submit'  className={styles.submit}  onClick={() => setIsAddressFormVisible(true)} value='Enter address manually' style={{display: isAddressFormVisible ? 'none' : 'inline'}}/>
-      </label>
-
+      {/* </label> */}
+      </div>
       <div className={styles.checkoutInfo} style={{display: isAddressFormVisible ? 'block' : 'none'}}>
         {/* <h2>Delivery Address</h2> */}
         <label>Name <sup className={styles.mandatory}>*</sup></label>

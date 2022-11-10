@@ -10,10 +10,11 @@ label {
 
 .textInput {
   display: block;
-  margin: 0.3em auto 1.5em auto;
+  margin: 0.3rem auto 1rem auto;
   width: 100%;
   border: solid 2px #ccc;
   padding: 0.925em 0 0.925em 1em;
+  box-sizing: border-box;
 }
 
 .value {
@@ -46,18 +47,25 @@ label {
   font-size: 14px;
   letter-spacing: 0.02em;
   margin: 0 auto;
-  padding: 0 2em;
   max-width: 500px;
   min-width: 360px;
 }
 
 .submit {
-  width: 50%;
-  margin: 0 25% 2rem 25%;
   background-color: black;
-  padding: 0.9em 0 0.9em 0;
+  padding: 1rem;
   color: white;
   font-weight: 900;
+  min-width: 40%;
+}
+
+.submit:hover {
+ cursor: pointer;
+}
+
+.addressButtons {
+  display: flex;
+  justify-content: space-evenly;  
 }
 
 .select {
@@ -66,7 +74,7 @@ label {
 }
 .select select {
   background: white;
-  width: 104%;
+  width: 100%;
   outline: none;
   -webkit-appearance: none;
   display: block;
@@ -78,11 +86,12 @@ label {
   font-family: inherit;
   font-size: inherit;
   padding: 0 1em 0;
+  box-sizing: border-box;
 }
 .select .arrow {
   position: absolute;
-  right: 0.5em;
-  top: 1em;
+  right: 1rem;
+  top: 1rem;
   pointer-events: none;
 }
 .select .arrow:after {
@@ -94,6 +103,7 @@ label {
   display: flex;
   justify-content: space-between;
 }
+
 .row > div {
   width: 49%;
 }/*# sourceMappingURL=index.module.css.map */

@@ -10,7 +10,6 @@ const initialStore = {
 const calculateTotal = (array) => {
   let total = 0
   for (let item of array) {
-    console.log(item.price * item.amount)
     total += parseFloat(item.price)*parseFloat(item.amount)
 
   }
@@ -26,11 +25,16 @@ const reducer = (state = initialStore, action) => {
     if (currentProduct.length > 0) {
       currentProduct[0].price = action.payload.price
       currentProduct[0].amount = action.payload.amount
+      currentProduct[0].name = action.payload.name
       if (action.payload.amount === 0) {
+        console.log('currentProduct: ', currentProduct[0])
+        console.log('state.order.products: ', state.order.products)
+        const updatedProducts = state.order.products.filter(product => product.name !== currentProduct[0].name)
+        console.log('updatedProducts: ', updatedProducts)
         return {
           ...state,
           order: {
-            products: [...state.order.products].filter(product => product.amount !== 0),
+            products: updatedProducts,
             total: calculateTotal([...state.order.products])
           }
         }

@@ -5,7 +5,7 @@ import { useSelector } from "react-redux"
 function Product({isBiggerThanMobile, id, name, price, img}) {
   
   const actualAmount = useSelector(state => state.order.products.filter(prod => prod.name === name))
-  console.log('actualAmount in Products: ', actualAmount)
+  // console.log('actualAmount in Products: ', actualAmount)
 
   return (
     <div className={(isBiggerThanMobile && "food-card-tablet") || "food-card first-group-card"}>

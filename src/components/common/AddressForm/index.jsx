@@ -9,7 +9,7 @@ function AddressForm({addressString, doDeliver, postcode, deliveryCost, handleSu
   const [inputPostcode, setInputPostcode] = useState(array[array.length - 1])
   const [town, setTown] = useState(array[array.length - 2])
   const [name, setName] = useState()
-  const [isAddressFormVisible, setIsAddressFormVisible] = useState(false)
+  // const [isAddressFormVisible, setIsAddressFormVisible] = useState(false)
 
   useEffect(() => {
     const array = addressString.split(',')
@@ -44,16 +44,16 @@ function AddressForm({addressString, doDeliver, postcode, deliveryCost, handleSu
       {/* <label htmlFor=""> */}
       <div className={styles.addressButtons}>
           <input type='submit'  className={styles.submit}  onClick={handleSubmit} value='Find your address'/>
-          <input type='submit'  className={styles.submit}  onClick={() => setIsAddressFormVisible(true)} value='Enter address manually' style={{display: isAddressFormVisible ? 'none' : 'inline'}}/>
+          {/* <input type='submit'  className={styles.submit}  onClick={() => setIsAddressFormVisible(true)} value='Enter address manually' style={{display: isAddressFormVisible ? 'none' : 'inline'}}/> */}
       {/* </label> */}
       </div>
-      <div className={styles.checkoutInfo} style={{display: isAddressFormVisible ? 'block' : 'none'}}>
+      <div className={styles.checkoutInfo}>
         {/* <h2>Delivery Address</h2> */}
         <label>Name <sup className={styles.mandatory}>*</sup></label>
-        <input type="text" className={styles.textInput} value={name} onChange={(e)=>setName(e.target.value)} placeholder='Enter your full name'></input>
+        <input type="text" className={styles.textInput} value={name} onChange={(e)=>setName(e.target.value)} placeholder='Enter your full name' required></input>
         
         <label>Address line 1 <sup className={styles.mandatory}>*</sup></label>
-        <input type="text" className={styles.textInput} value={firstLine} onChange={(e)=>setFirstLine(e.target.value)} placeholder='e.g. 122 Meyrick Avenue'></input>
+        <input type="text" className={styles.textInput} value={firstLine} onChange={(e)=>setFirstLine(e.target.value)} placeholder='e.g. 122 Meyrick Avenue' required></input>
         <label >Address line 2 (optional)</label>
         <input type="text" className={styles.textInput}  value={secondLine} onChange={(e)=>setSecondLine(e.target.value)} placeholder='Second line of your address'/>
         <label >Address line 3 (optional)</label>
@@ -61,16 +61,16 @@ function AddressForm({addressString, doDeliver, postcode, deliveryCost, handleSu
         <div className={styles.row}>
           <div>
             <label>Postcode <sup className={styles.mandatory}>*</sup></label>
-            <input type="text" className={styles.textInput}  value={inputPostcode} onChange={(e)=>setInputPostcode(e.target.value)} placeholder='e.g. HP1 1AL'></input>
+            <input type="text" className={styles.textInput}  value={inputPostcode} onChange={(e)=>setInputPostcode(e.target.value)} placeholder='e.g. HP1 1AL' required></input>
           </div>
           <div>
             <label>City/Town <sup className={styles.mandatory}>*</sup></label>
-            <input type="text" className={styles.textInput} value={town} onChange={(e)=>setTown(e.target.value)} placeholder='e.g. Liverpool'></input>
+            <input type="text" className={styles.textInput} value={town} onChange={(e)=>setTown(e.target.value)} placeholder='e.g. Liverpool' required></input>
           </div>
         </div>
         
         <label>Email <sup className={styles.mandatory}>*</sup></label>
-        <input type="text" className={styles.textInput} placeholder='e.g. joskapista@yahoo.com'></input>
+        <input type="text" className={styles.textInput} placeholder='e.g. gyagyas@liza.com' required></input>
       </div>
     </form>
   )

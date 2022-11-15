@@ -14,7 +14,7 @@ export default function Products() {
   // const [widthDiff, setWidthDiff] = useState(0)
   
   // const backendServerProducts = 'https://react-restaurant-sample.herokuapp.com/products'
-  const backendServerProducts = 'http://localhost:4040/products'
+  const backendServerProducts = 'http://localhost:5000/products'
 
   useEffect(() => {
 

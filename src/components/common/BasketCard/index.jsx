@@ -5,6 +5,7 @@ import AmountButtons from '../AmountButtons'
 import { updateBasket } from "../../../actions"
 
 import styles from './index.module.css'
+import bin from '../../../images/bin.png'
 
 function BasketCard({name, price}) {
 
@@ -26,7 +27,7 @@ function BasketCard({name, price}) {
         </div>
         <div>{actualProduct.length > 0 && '£' + (actualProduct[0]['amount'] * price).toFixed(2)}</div>
         <div className={styles.closeBasket} onClick={() => dispatch(updateBasket({name: name, price: price, amount: 0}))
-          }>Delete</div>
+          }><img src={bin} alt='bin' style={{height: '1.5rem'}}/></div>
 
       </div>}
     </>
